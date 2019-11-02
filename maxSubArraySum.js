@@ -17,35 +17,28 @@
         return max
     }
 
-    console.log('This is from the first algo', maxSubarraySum([1,2,3,4,5,6], 2))
+    console.log('This is from the first algo', maxSubarraySum([4, 2, 3, 4, 5, 6, 7, 8, 9], 3))
 })();
 
-// (() => {
-//     const maxSubarraySu = (arr, num) => {
+(() => {
+    const maxSubarraySu = (arr, num) => {
         
-//         if (num > arr.length) {
-//             return null
-//         }
-//         let store = [];
-//         let store2 = []
-        
-//         for(let i = 0; i < arr.length; i++){
-//             if(store.length === 0){
-//                 store.push(arr[i] + arr[i+1] + arr[i+2])
-//             }
-//             // if(store.length > 0 && ){
-//             //     store2.push(arr[i-1]+ arr[i]+ arr[1+1])
-//             //     console.log(arr[i-1])
-//             // }
-//         }
-//         console.log(store)
-//         console.log(store2)
-//         store.sort((a,b) => {
-//             return b-a
-//         })
-//         return store[0]
-//     }
+        if (num > arr.length) {
+            return null
+        }
+        let tempStore = 0
+        let maxStore = 0
+        for(let i = 0; i<num; i++){
+            tempStore += arr[i]
+        }
+        maxStore = tempStore
+        for(let i = num; i < arr.length; i++){
+            tempStore = tempStore - arr[i - num] + arr[i]
+            maxStore = Math.max(tempStore, maxStore)
+        }
+       return maxStore;
+    }
 
 
-//     console.log('This is from the second algo', maxSubarraySu([4,2,3,4,5,6,7,8,9], 3))
-// })()
+    console.log('This is from the second algo', maxSubarraySu([4,2,3,4,5,6,7,8,9], 3))
+})()
