@@ -121,9 +121,35 @@ class SinglyLinkedList {
         this.length--
         return removeNode
 
+    }
 
+    reverse(){
+        let head = this.head
+        this.head = this.tail
+        this.tail = head
+        let prev = null
+        for(let i = 0; i < this.length; i++){
+            let next = head.next
+            head.next = prev;
+            prev = head
+            head = next
+        }
+        return this.print()
+    }
+
+    print(){
+        let arr = []
+        while(this.head){
+            arr.push(this.head.val)
+            this.head = this.head.next
+        }
+        console.log(arr)
     }
 }
 
 let list = new SinglyLinkedList()
+list.push(3)
+list.push(1)
+list.push(9)
 
+console.log(list.print())
