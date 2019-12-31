@@ -17,36 +17,52 @@ class Stack {
         if (!this.first) {
             this.first = newNode
             this.last = this.first
-            this.last.next = null
         }
         else {
-            let oldLast = this.last
-            oldLast.next = newNode
-            this.last = newNode
-            this.last.next = null
+            let oldFirst = this.first
+            this.first = newNode
+            newNode.next = oldFirst
         }
-        this.size++
-        return this.size
+        return ++this.size
     }
 
     pop() {
-        if (this.size === 0) return undefined
-        if (this.size === 1) {
-            this.last.next = null
+        let toDisplay;
+        if (this.size === 0) {
+            this.last = null
+            this.first = null
+            return null
+        }
+        if (this.first === this.last) {
+            toDisplay = this.first
+            this.first = null
+            this.last = null
+            this.size--
+            return toDisplay.val
         }
         else {
-            let toRemove = this.last
-            toRemove = null
+            toDisplay = this.first
+            this.first = toDisplay.next
+            this.size--
+            return toDisplay.val
         }
-        this.size--
-        return this.size
+
     }
 
     print() {
-        let arr = [this.first]
-        let first = this.first.next
-        for (let i = 0; i < this.size; i++) {
-            arr.push(first.val)
+        let arr = [this.first.val]
+        if (this.size === 1) {
+            console.log(arr)
+            return;
         }
+        else {
+            let item = this.first.next
+            for (let i = 1; i < this.size; i++) {
+                arr.push(item.val)
+            }
+            console.log(arr)
+        }
+
+
     }
 }
