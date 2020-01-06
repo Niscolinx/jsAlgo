@@ -30,12 +30,12 @@ class BinarySearchTree {
                         current = current.left
                     }
                 }
-                else if(val > current.val){
-                    if(!current.right){
+                else if (val > current.val) {
+                    if (!current.right) {
                         current.right = newNode
                         return this
                     }
-                    else{
+                    else {
                         current = current.right
                     }
                 }
@@ -45,35 +45,35 @@ class BinarySearchTree {
     }
 
     find(val) {
-        if(!this.root){
+        if (!this.root) {
             return false
         }
-        else{
-            if(val === this.root.val){
+        else {
+            if (val === this.root.val) {
                 return true
             }
-            else{
+            else {
                 let current = this.root
-                while(true){
-                    if(val < current.val){
-                        if(!current.left){
+                while (true) {
+                    if (val < current.val) {
+                        if (!current.left) {
                             return false
                         }
-                        else if(current.left.val === val){
-                            return true
+                        else if (current.left.val === val) {
+                            return current
                         }
-                        else{
+                        else {
                             current = current.left
                         }
                     }
-                    if(val > current.val){
-                        if(!current.right){
+                    if (val > current.val) {
+                        if (!current.right) {
                             return false
                         }
                         else if (current.right.val === val) {
-                            return true
+                            return current
                         }
-                        else{
+                        else {
                             current = current.right
                         }
                     }
@@ -81,8 +81,24 @@ class BinarySearchTree {
             }
         }
     }
+
+    BFS() {
+        let arr = []
+        let visited = []
+        let root = this.root
+        arr.push(root)
+        while (arr.length) {
+            root = arr.shift()
+            visited.push(root.val)
+            if (root.left) {
+                arr.push(root.left)
+            }
+            if (root.right) {
+                arr.push(root.right)
+            }
+        }
+        return visited
+    }
 }
 
-let bst = new BinarySearchTree()
-bst.insert(20)
-bst.insert(15)
+
