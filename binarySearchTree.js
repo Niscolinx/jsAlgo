@@ -82,7 +82,7 @@ class BinarySearchTree {
         }
     }
 
-    BFS() {
+    BST() {
         let arr = []
         let visited = []
         let root = this.root
@@ -99,6 +99,61 @@ class BinarySearchTree {
         }
         return visited
     }
+
+    DFS() {
+        // let arr = [],
+        //     visited = [],
+        //      root = this.root
+        // arr.push(root.val)
+
+        //     while (root.left) {
+        //         let node = root.left
+        //         arr.push(node.val)
+        //         if (node.left) {
+        //             arr.push(node.left.val)
+        //         }
+        //         if (node.right) {
+        //             arr.push(node.right.val)
+        //         }
+        //         break
+        //     }
+
+        //     while (root.right) {
+        //         let node = root.right
+        //         arr.push(node.val)
+        //         if (node.left) {
+        //             arr.push(node.left.val)
+        //         }
+        //         if (node.right) {
+        //             arr.push(node.right.val)
+        //         }
+        //         break;
+        //     }
+        //     return arr;
+
+        let visited = []
+
+        function helper(node) {
+            visited.push(node.val)
+
+            if (node.left) helper(node.left)
+            if (node.right) helper(node.right)
+        }
+
+        helper(this.root)
+        return visited
+
+    }
 }
 
+let bst = new BinarySearchTree()
+bst.insert(10)
+bst.insert(6)
+bst.insert(3)
+bst.insert(8)
+bst.insert(15)
+bst.insert(20)
+bst.insert(12)
+
+bst.DFS()
 
