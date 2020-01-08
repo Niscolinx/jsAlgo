@@ -100,36 +100,7 @@ class BinarySearchTree {
         return visited
     }
 
-    DFS() {
-        // let arr = [],
-        //     visited = [],
-        //      root = this.root
-        // arr.push(root.val)
-
-        //     while (root.left) {
-        //         let node = root.left
-        //         arr.push(node.val)
-        //         if (node.left) {
-        //             arr.push(node.left.val)
-        //         }
-        //         if (node.right) {
-        //             arr.push(node.right.val)
-        //         }
-        //         break
-        //     }
-
-        //     while (root.right) {
-        //         let node = root.right
-        //         arr.push(node.val)
-        //         if (node.left) {
-        //             arr.push(node.left.val)
-        //         }
-        //         if (node.right) {
-        //             arr.push(node.right.val)
-        //         }
-        //         break;
-        //     }
-        //     return arr;
+    DFSpreOrder() {
 
         let visited = []
 
@@ -144,6 +115,39 @@ class BinarySearchTree {
         return visited
 
     }
+
+    DFSpostOrder() {
+
+        let visited = []
+
+        let helper = function (node) {
+
+            visited.unshift(node.val)
+
+            if (node.right) helper(node.right)
+            if (node.left) helper(node.left)
+        }
+        helper(this.root)
+        return visited
+
+    }
+
+    DFSinOrder() {
+        let visited = []
+        let leftNode = this.root.left
+
+        const helper = (node) => {
+            if (node.left) helper(node.left)
+
+            visited.push(node.val)
+
+            if (node.right) helper(node.right)
+        }
+
+        helper(this.root)
+        console.log(visited)
+        return visited
+    }
 }
 
 let bst = new BinarySearchTree()
@@ -153,7 +157,7 @@ bst.insert(3)
 bst.insert(8)
 bst.insert(15)
 bst.insert(20)
-bst.insert(12)
 
-bst.DFS()
+bst.DFSinOrder()
+
 
