@@ -10,9 +10,9 @@ class BinaryHeap {
     }
     bubbleUp() {
         let idx = this.values.length - 1;
-        const child = this.values[idx]
-
+        
         while (idx > 0) {
+            const child = this.values[idx]
             let parentIdx = Math.floor((idx - 1) / 2)
             let parent = this.values[parentIdx]
             if (child <= parent) break;
@@ -71,6 +71,5 @@ class BinaryHeap {
 let heap = new BinaryHeap()
 heap.insert(55)
 
-heap.extractMax()
 
 
