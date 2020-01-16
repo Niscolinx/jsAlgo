@@ -1,4 +1,6 @@
 
-let values = [23,55,123, 'mango', 37,8,9]
+let name = 'blue'
 const log = console.log
-log(values[[mango]])
+log(name.charCodeAt(0))
+
+
