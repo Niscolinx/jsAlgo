@@ -18,13 +18,27 @@ class hashTable {
             this.keyMap[num].push([key, val])
         }
         else {
-         this.keyMap.push([key, val]);
+            this.keyMap.push([key, val]);
         }
-        console.table(this.keyMap)
+        return this.keyMap
+    }
+
+    get = (key) => {
+        let num = this._hash(key)
+        if (this.keyMap[num].length <= 0) return undefined
+        else {
+            for (let i = 0; i < this.keyMap[num].length; i++) {
+
+                if (key === this.keyMap[num][i][0]) {
+                    return this.keyMap[num][i]
+                }
+            }
+
+            return undefined
+        }
     }
 }
 
 
 
 let hash = new hashTable()
-hash.set('salmon', 5)
