@@ -1,5 +1,5 @@
-use itertools:
 import itertools
+
 
 m = ['user1', 'user2']
 k = {

@@ -11,14 +11,12 @@
     let count = 0
     for (let key in number) {
 
-        arr.push(`The user is ${user[count]} chose ${number[key]}`)
+        arr.push(`${user[count]} chose ${number[key]}`)
         count++
         if (count === user.length) {
             count = 0
         }
-        // for(let i = 0; i < count; i++){
-        //     count++
-        // }
+
     }
 
     console.table(arr)
