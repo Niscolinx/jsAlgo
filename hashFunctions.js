@@ -1,5 +1,5 @@
 class hashTable {
-    constructor(size = 53) {
+    constructor(size = 17) {
         this.keyMap = Array.from({ length: size }, () => [])
     }
     _hash = (str) => {
@@ -37,8 +37,30 @@ class hashTable {
             return undefined
         }
     }
+
+    values = () => {
+        let values = []
+        let tempVal;
+        for(let i = 0; i < this.keyMap.length; i++){
+            if(this.keyMap[i].length > 0){
+                
+                for(let j = 0; j < this.keyMap[i].length; j++){
+                    tempVal = this.keyMap[i][j][1]
+                    values.push(tempVal)
+
+                }
+            }
+        }
+
+        console.log(values)
+    }
 }
 
 
 
 let hash = new hashTable()
+hash.set('yellow', 'jhsfzn')
+hash.set('yelow', 'sfzn')
+hash.set('yow', 'gsfzn')
+hash.set('llow', 'isfzg')
+hash.values()
