@@ -33,7 +33,7 @@ class hashTable {
                     return this.keyMap[num][i]
                 }
             }
-
+            
             return undefined
         }
     }
@@ -43,16 +43,34 @@ class hashTable {
         let tempVal;
         for(let i = 0; i < this.keyMap.length; i++){
             if(this.keyMap[i].length > 0){
-                
                 for(let j = 0; j < this.keyMap[i].length; j++){
                     tempVal = this.keyMap[i][j][1]
+                    values.push(tempVal)
+                    
+                }
+            }
+        }
+
+        let newArr = [...new Set(values)]
+
+        return newArr;
+    }
+    keys = () => {
+        let values = []
+        let tempVal;
+        for(let i = 0; i < this.keyMap.length; i++){
+            if(this.keyMap[i].length > 0){
+                for(let j = 0; j < this.keyMap[i].length; j++){
+                    tempVal = this.keyMap[i][j][0]
                     values.push(tempVal)
 
                 }
             }
         }
 
-        console.log(values)
+        let newArr = [...new Set(values)]
+
+        return newArr;
     }
 }
 
@@ -63,4 +81,6 @@ hash.set('yellow', 'jhsfzn')
 hash.set('yelow', 'sfzn')
 hash.set('yow', 'gsfzn')
 hash.set('llow', 'isfzg')
+hash.set('llow', 'isfzg')
 hash.values()
+hash.keys()

@@ -4,10 +4,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "chrome",
+            "type": "node",
             "request": "launch",
-            "name": "Launch Chrome from the file system",
-            "file": "${workspaceFolder}"
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/adjacencyList.js",
+            "cwd": "${workspaceFolder}",
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
         }
+           
+       
     ]
 }

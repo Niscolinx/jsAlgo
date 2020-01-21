@@ -34,3 +34,5 @@ class Queue {
         return currentFirst.val
     }
 }
+
+let q = new Queue()

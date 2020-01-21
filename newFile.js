@@ -1,6 +1,6 @@
+let arr = ['tokyo', 'berlin', 'rio']
 
-let name = 'blue'
-const log = console.log
-log(name.charCodeAt(0))
+let newArr = arr.splice(1,1)
+console.log(arr, newArr)
 
 
