@@ -7,7 +7,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/adjacencyList.js",
+            "program": "${workspaceFolder}/Dijksdra's Algorithm.js",
             "cwd": "${workspaceFolder}",
             "skipFiles": [
                 "<node_internals>/**"
