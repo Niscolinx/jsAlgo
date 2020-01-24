@@ -4,6 +4,7 @@ class graph {
         this.shortest = {}
         this.visited = {}
         this.prev = {}
+        this.start = null
     }
 
     addVertex(vertex) {
@@ -17,20 +18,8 @@ class graph {
 
     }
 
-    distance(x, y) {
-        if (!(this.list[x] && this.list[y])) return null
 
-        let z;
-        for (let i in this.list[x]) {
 
-            if (this.list[x][i].node === y) {
-                z = this.list[x][i].weight
-                return z
-            }
-        }
-        
-    }
-    
     isSmaller(num) {
         for (let i in this.shortest) {
             if (!this.visited[i]) {
@@ -38,55 +27,69 @@ class graph {
             }
         }
     }
-    
+
     findShortestPath(v1, v2) {
+
         let smallest = Infinity;
-        
+
         for (let key in this.list) {
             this.prev[key] = null
-            
+
             if (key === v1) {
                 this.shortest[v1] = 0
+                this.start = key
             }
             else {
                 this.shortest[key] = Infinity
             }
         }
-        
+
         for (let i in this.shortest) {
             if (this.shortest[i] < smallest) {
                 smallest = this.shortest[i]
             }
         }
         for (let j in this.shortest) {
-            let small = Infinity
-          
-            let key = this.isSmaller(smallest)
-            
-            if (this.visited[key]) return null
-            
+            // if (this.visited[v2]) {
+                //     console.log(this.prev[v2])
+                //     return this.prev[v2]
+                // }
+                let small = Infinity
+                
+                let key = this.isSmaller(smallest)
+                
+                if (this.visited[key]) return null
+                
             this.visited[key] = true
-
+            
             let checkWeight = Infinity
+            let newSum = 0;
             for (let i = 0; i < this.list[key].length; i++) {
                 
-                console.log(this.visited[this.list[key][i].node])
                 if (!this.visited[this.list[key][i].node]) {
 
-                    this.prev[this.list[key][i].node] = key
-                    this.shortest[this.list[key][i].node] = this.distance(key, this.list[key][i].node) + this.distance(this.prev[key], key)
+                    newSum++
+                    let sum = this.vertexPath(key, this.list[key][i].node)
+                    
+                    if (this.shortest[this.list[key][i].node] !== sum) {
 
-                    if (this.list[key][i].weight < checkWeight) {
-                        checkWeight = this.distance(key, this.list[key][i].node) + this.distance(this.prev[key], key)
+                        this.shortest[this.list[key][i].node] = sum
+                        this.prev[this.list[key][i].node] = key
                     }
 
                 }
             }
 
+            console.log(newSum)
+            if(newSum === 0){
+                 console.log('the shortest path is', this.prev[v2])
+                 return this.prev[v2]
+                
+            }
+
             for (let i in this.shortest) {
                 if (!this.visited[i]) {
 
-                    console.log(this.shortest[i], small)
                     if (this.shortest[i] < small && this.shortest[i] !== small) {
 
                         small = this.shortest[i]
@@ -98,6 +101,62 @@ class graph {
 
         }
     }
+
+    distance(x, y) {
+
+        if (!y) return 0
+        let z;
+        for (let i in this.list[x]) {
+
+            if (this.list[x][i].node === y) {
+                z = this.list[x][i].weight
+                return z
+            }
+        }
+
+    }
+
+    vertexPath(x, y) {
+        let arr = []
+        let prev = this.prev
+        let start = this.start
+
+        if (!this.prev[x]) {
+
+            return this.distance(x, y)
+        }
+        else {
+
+            arr.push([x, y])
+            checkPrev(x)
+
+            let total = 0
+            for (let i = 0; i < arr.length; i++) {
+                total += this.distance(arr[i][0], arr[i][1])
+            }
+            return total
+        }
+
+        function checkPrev(edge) {
+            let key = start
+
+            while (key) {
+
+                for (key in prev) {
+
+                    if (key === edge) {
+                        arr.push([key, prev[key]])
+                        edge = prev[key]
+                        key = start
+                        break
+                    }
+                    if (!edge) return
+
+                }
+            }
+        }
+    }
+
 
 
 }
