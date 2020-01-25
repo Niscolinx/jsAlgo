@@ -5,6 +5,7 @@ class graph {
         this.visited = {}
         this.prev = {}
         this.start = null
+        this.arr = []
     }
 
     addVertex(vertex) {
@@ -31,7 +32,7 @@ class graph {
     findShortestPath(v1, v2) {
 
         let smallest = Infinity;
-        
+
         //Loops over the list and stores the edges in objects
         for (let key in this.list) {
             this.prev[key] = null
@@ -54,23 +55,24 @@ class graph {
             }
         }
         for (let j in this.shortest) {
-          
-                let small = Infinity
 
-                // generates a new edge to look into and find the paths linked to it
-                let key = this.isSmaller(smallest)
-                
-                if (this.visited[key]) return null
-                
+            let small = Infinity
+
+            // generates a new edge to look into and find the paths linked to it
+            let key = this.isSmaller(smallest)
+
+            if (this.visited[key]) return null
+
             this.visited[key] = true
-            
+
             let AllVisited = 0;
+
             for (let i = 0; i < this.list[key].length; i++) {
-                
+
                 //If the edge has not been visited, check it's corresponding vertices
                 if (!this.visited[this.list[key][i].node]) {
 
-                    newSum++
+                    AllVisited++
                     let sum = this.vertexPath(key, this.list[key][i].node)
 
                     //If  the previous sum of the vertices is not equal to the current sum(that means their paths are the same, so it's not shorter or longer),  added the shortest distance and update the previous path
@@ -86,10 +88,16 @@ class graph {
 
             //If every edge of the destination has been visited, that means the shortest path is now known
 
-            if(AllVisited === 0){
-                 console.log('the shortest path is', this.prev[v2])
-                 return this.prev[v2]
-                
+            if (AllVisited === 0) {
+                let newArr = this.arr.reduce((a, b) => {
+                    return a.concat(b)
+                }, [])
+                let path = [...new Set(newArr)]
+                path.pop()
+                let finalDistance = path.reverse().join('-').split()
+                console.log(finalDistance)
+                return finalDistance
+
             }
 
             for (let i in this.shortest) {
@@ -123,6 +131,7 @@ class graph {
 
     vertexPath(x, y) {
         let arr = []
+        this.arr = arr
         let prev = this.prev
         let start = this.start
 
@@ -132,7 +141,7 @@ class graph {
         }
         else {
 
-            arr.push([x, y])
+            arr.push([y, x])
             checkPrev(x)
 
             //When Checkprev is done, total takes the sum of all the vertices from point n to point m
@@ -184,5 +193,5 @@ D.addEdge('C', 'F', 4)
 D.addEdge('D', 'E', 3)
 D.addEdge('D', 'F', 1)
 D.addEdge('F', 'E', 1)
-D.findShortestPath('E', 'C')
+D.findShortestPath('A', 'E')
 

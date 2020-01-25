@@ -11,6 +11,7 @@ class BinarySearchTree {
         this.root = null
     }
 
+    //Insert a new val
     insert(val) {
         let newNode = new Node(val)
         if (!this.root) {
