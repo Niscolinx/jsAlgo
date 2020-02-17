@@ -13,7 +13,7 @@ class BinarySearchTree {
 
     //Insert a new val
     insert(val) {
-        console.log('first test')
+        
         let newNode = new Node(val)
         if (!this.root) {
             this.root = newNode
