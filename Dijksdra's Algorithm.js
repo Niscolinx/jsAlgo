@@ -7,8 +7,9 @@ class graph {
         this.start = null
         this.arr = []
     }
-
+    
     addVertex(vertex) {
+        console.log('first test')
         if (!this.list[vertex]) this.list[vertex] = []
     }
 
@@ -173,7 +174,6 @@ class graph {
             }
         }
     }
-
 
 
 }

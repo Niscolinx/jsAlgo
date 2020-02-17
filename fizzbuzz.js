@@ -24,7 +24,7 @@
         return total
     };
 
-
+    console.log('first test')
     return fizzBuzz(05)
 
 
