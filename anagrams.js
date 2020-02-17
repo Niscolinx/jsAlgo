@@ -1,7 +1,7 @@
 // Write a function that takes two strings, and check whether all the characters in the first string are also in the second string deglect their index
 
 function anagrams(first, second) {
-    console.log('first test')
+    
     if (first.length !== second.length) {
         return false;
     }
