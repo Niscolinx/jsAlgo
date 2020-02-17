@@ -82,7 +82,7 @@ class DoublyLinkedList {
     }
 
     get(index) {
-        console.log('first test')
+        
         if (index >= this.length || index < 0) return null
         let count = 0;
         let secondCount = this.length
