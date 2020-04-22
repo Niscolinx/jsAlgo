@@ -2,10 +2,8 @@ String.prototype.toJadenCase = function () {
     //...
    let words = this.split(' ')
 
-   console.log(words.length)
-
    for(let i = 0; i < words.length; i++){
-       console.log(words[i].charAt(0).toUpperCase() + words[i].slice(1))
+       return words[i].charAt(0).toUpperCase() + words[i].slice(1)
    }
 };
 
