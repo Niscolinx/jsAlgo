@@ -1,7 +1,7 @@
 String.prototype.toJadenCase = function () {
     //...
-   this.split.map(e => {
-       console.log(e)
+   this.split(' ').map(e => {
+       
    })
 };
 
