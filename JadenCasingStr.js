@@ -2,7 +2,7 @@ String.prototype.toJadenCase = function () {
     //...
    let words = this.split(' ')
 
-   console.log(words)
+   console.log(words.length)
 
    for(let i = 0; i < words.length; i++){
        console.log(words[i][0])
