@@ -5,7 +5,7 @@ String.prototype.toJadenCase = function () {
    console.log(words.length)
 
    for(let i = 0; i < words.length; i++){
-       console.log(words[i].charAt(0).toUpperCase() + words[i].splice(1))
+       console.log(words[i].charAt(0).toUpperCase() + words[i].slice(1))
    }
 };
 
