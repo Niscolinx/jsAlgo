@@ -5,7 +5,7 @@ String.prototype.toJadenCase = function () {
    console.log(words.length)
 
    for(let i = 0; i < words.length; i++){
-       console.log(words[i][0])
+       console.log(words[0])
    }
 };
 
