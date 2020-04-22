@@ -1,9 +1,6 @@
 String.prototype.toJadenCase = function () {
     //...
-   this.split(' ').map(e => {
-       let firstLeter = e.charAt(0).toLocaleUpperCase().concat(slice(1))
-       console.log(firstLeter)
-   })
+   let words = this.split(' ')
 };
 
 
