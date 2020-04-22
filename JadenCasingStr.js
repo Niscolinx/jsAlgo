@@ -1,12 +1,12 @@
 String.prototype.toJadenCase = function () {
     //...
    let words = this.split(' ')
-
+    let capitalizedwords = []
 
    for(let i = 0; i < words.length; i++){
-       let capitalizedwords = words[i].charAt(0).toUpperCase() + words[i].slice(1)
-       console.log(capitalizedwords.join(' '))
-   }
+       capitalizedwords.push(words[i].charAt(0).toUpperCase() + words[i].slice(1))
+    }
+    console.log(capitalizedwords.join(' '))
 };
 
 
