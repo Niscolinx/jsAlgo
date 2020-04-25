@@ -11,22 +11,25 @@ const pickRandomWord = () => {
     for(let i = 0; i < words.length; i++){
         
         let bucket = {}
-        
+        let isUnique = true;
         for(let j = 0; j < words[i].length; j++){
             bucket[words[i][j]] = ++bucket[words[i][j]]|| 1
         }
         
         for(let m = 0; m < Object.values(bucket).length; m++){
             if(Object.values(bucket)[m] > 1){
-                return
+                isUnique = false
+                break
             }
         }
 
-        uniqueWords.push(words[i])
+        if(isUnique){
+            uniqueWords.push(words[i])
+        }
 
     }
 
-    console.log(uniqueWords)
+    return uniqueWords
     
 }
 
