@@ -10,11 +10,16 @@ const pickRandomWord = () => {
     for(let i = 0; i < words.length; i++){
         
         let bucket = {}
+        
         for(let j = 0; j < words[i].length; j++){
             bucket[words[i][j]] = ++bucket[words[i][j]]|| 1
         }
         
-        console.log(Object.entries(bucket))
+        console.log(Object.values(bucket), i)
+
+        for(let m = 0; m < Object.values(bucket).length; m++){
+            
+        }
     }
 
     
