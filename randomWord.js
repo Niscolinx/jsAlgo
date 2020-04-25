@@ -15,10 +15,10 @@ const pickRandomWord = () => {
             bucket[words[i][j]] = ++bucket[words[i][j]]|| 1
         }
         
-        console.log(Object.values(bucket), i)
-
         for(let m = 0; m < Object.values(bucket).length; m++){
-            
+            if(Object.values(bucket)[m] > 1){
+                return
+            }
         }
     }
 
