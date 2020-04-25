@@ -28,8 +28,9 @@ const pickRandomWord = () => {
         }
 
     }
-
-    return uniqueWords
+    let randomUnique = uniqueWords.random()
+    console.log(randomUnique)
+    return randomUnique
     
 }
 
