@@ -13,9 +13,9 @@ const pickRandomWord = () => {
         for(let j = 0; j < words[i].length; j++){
             bucket[words[i][j]] = ++bucket[words[i][j]]|| 1
         }
+        console.log(bucket)
     }
 
-    console.log(bucket)
     
 }
 
