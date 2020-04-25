@@ -7,9 +7,9 @@ const pickRandomWord = () => {
     //Crated a list of random words with some words having repeated letters
     let words = ['yaah', 'hello', 'world', 'come', 'tomorrow', 'alright', 'gotten', 'love', 'Holy', 'see']
 
-    words.map(word => {
-        console.log(word)
-    })
+    for(let i = 0; i < words.length; i++){
+        console.log(words[i])
+    }
     
 }
 
