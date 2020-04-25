@@ -7,9 +7,9 @@ const pickRandomWord = () => {
     //Crated a list of random words with some words having repeated letters
     let words = ['yaah', 'hello', 'world', 'come', 'tomorrow', 'alright', 'gotten', 'love', 'Holy', 'see']
 
-    let bucket = {}
     for(let i = 0; i < words.length; i++){
-
+        
+        let bucket = {}
         for(let j = 0; j < words[i].length; j++){
             bucket[words[i][j]] = ++bucket[words[i][j]]|| 1
         }
