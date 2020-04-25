@@ -28,11 +28,9 @@ const pickRandomWord = () => {
         }
 
     }
-    console.log(uniqueWords, uniqueWords.length - 1)
-    let randomUnique = Math.floor(Math.random() * uniqueWords.length - 1)
+    let randomUnique = Math.floor(Math.random() * uniqueWords.length)
     let randomSelectedWord = uniqueWords[randomUnique]
-    console.log(randomSelectedWord, randomUnique)
-    return randomUnique
+    return randomSelectedWord
     
 }
 
