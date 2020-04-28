@@ -75,6 +75,15 @@
         if (num <= 1) {
             return false
         }
-        if(num % num == 0 && num % )
+        if(num % num == 0 && num % 1 == 0){
+            console.log(true)
+            return true
+        }
+
+        else{
+            return false
+        }
 }
+
+return isPrime(3)
 })
