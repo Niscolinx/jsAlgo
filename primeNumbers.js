@@ -87,5 +87,5 @@
         }
 }
 
-return isPrime(1)
+return isPrime(4)
 })()
