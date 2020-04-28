@@ -73,6 +73,7 @@
         //TODO
 
         if (num <= 1) {
+            console.log(false)
             return false
         }
         if(num % num == 0 && num % 1 == 0){
