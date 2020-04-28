@@ -76,16 +76,20 @@
             console.log(false)
             return false
         }
-        if(num % num == 0 && num % 1 == 0){
+        if (num == 3) {
+            console.log(true)
+            return true
+        }
+        if (num % num == 0 && num % 1 == 0 && num % 2 == 1 && num % 3 == 1) {
             console.log(true)
             return true
         }
 
-        else{
+        else {
             console.log(false)
             return false
         }
-}
+    }
 
-return isPrime(4)
+    return isPrime(9)
 })()
