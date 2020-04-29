@@ -69,27 +69,23 @@
 // })()
 
 (() => {
+
     function isPrime(num) {
         //TODO
-
         if (num <= 1) {
-            console.log(false)
             return false
         }
-        if (num == 3) {
-            console.log(true)
+        if (num == 3 || num == 2 || num == 5) {
             return true
         }
-        if (num % num == 0 && num % 1 == 0 && num % 2 == 1 && num % 3 == 1) {
-            console.log(true)
+        if (num % 2 == 1 && (num % 3 == 1 || num % 3 == 2)) {
             return true
         }
 
         else {
-            console.log(false)
             return false
         }
-    }
 
-    return isPrime(9)
+    }
+    isPrime(8)
 })()
