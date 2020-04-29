@@ -74,20 +74,24 @@
         //TODO
         {
             if (n <=1) {
+                console.log(false)
                 return false;
             }
             else if (n === 2) {
+                console.log(false)
                 return true;
             } else {
                 for (var x = 2; x < n; x++) {
                     if (n % x === 0) {
+                        console.log(false)
                         return false;
                     }
                 }
+                console.log(true)
                 return true;
             }
         }
 
     }
-    isPrime(8)
+    isPrime(10000008)
 })()
