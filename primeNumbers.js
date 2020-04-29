@@ -72,18 +72,21 @@
 
     function isPrime(num) {
         //TODO
-        if (num <= 1) {
-            return false
-        }
-        if (num == 3 || num == 2 || num == 5) {
-            return true
-        }
-        if (num % 2 == 1 && (num % 3 == 1 || num % 3 == 2)) {
-            return true
-        }
+        {
 
-        else {
-            return false
+            if (n === 1) {
+                return false;
+            }
+            else if (n === 2) {
+                return true;
+            } else {
+                for (var x = 2; x < n; x++) {
+                    if (n % x === 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
         }
 
     }
