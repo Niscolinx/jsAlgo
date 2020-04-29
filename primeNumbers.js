@@ -70,11 +70,10 @@
 
 (() => {
 
-    function isPrime(num) {
+    function isPrime(n) {
         //TODO
         {
-
-            if (n === 1) {
+            if (n <=1) {
                 return false;
             }
             else if (n === 2) {
