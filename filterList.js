@@ -5,7 +5,7 @@ function filter_list(arr) {
         typeof item === 'number'
     })
 
-    console
+    console.log(result)
 }
 
 
