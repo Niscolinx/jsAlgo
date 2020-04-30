@@ -1,8 +1,6 @@
-function filter_list(l) {
+function filter_list(arr) {
     // Return a new array with the strings filtered out
-    if(l < 0){
-        
-    }
+    arr.map
 
 }
 
