@@ -2,7 +2,7 @@ function filter_list(arr) {
     // Return a new array with the strings filtered out
 
     let result = arr.filter(item => {
-        typeof item === 'number'
+        return typeof item === 'number'
     })
 
     console.log(result)
