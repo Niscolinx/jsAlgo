@@ -1,6 +1,6 @@
 function filter_list(arr) {
     // Return a new array with the strings filtered out
-    arr.map
+    arr.filter()
 
 }
 
