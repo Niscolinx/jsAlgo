@@ -1,6 +1,8 @@
 function filter_list(arr) {
     // Return a new array with the strings filtered out
-    arr.filter()
+    arr.filter(item => {
+        typeof item === 'number'
+    })
 
 }
 
