@@ -5,6 +5,7 @@ function filter_list(arr) {
         return typeof item === 'number' && item > -1
     })
 
+    console.log(result)
     return result
 }
 
