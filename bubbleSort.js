@@ -41,6 +41,7 @@ function bubbleSort(arr){
             if(noSwaps) return;
         }
     }
+
     console.log(arr)
     return arr
 }

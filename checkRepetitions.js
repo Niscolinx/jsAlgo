@@ -30,6 +30,7 @@
         return true
     }
     //console.log(isPalindrome("A Santa Lived As a Devil At NASA"));
+
     console.log(isPalindrome("boob"));
 
 })()

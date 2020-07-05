@@ -24,7 +24,7 @@
         return total
     };
 
-
+    
     return fizzBuzz(05)
 
 
