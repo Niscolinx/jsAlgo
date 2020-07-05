@@ -24,6 +24,7 @@ function pureRecursion(arr){
     for(let i of arr){
         if(i % 2 ===1){
             newStore.push(i)
+            console.log('the newstore is', newstore)
         }
     }
     newStore = newStore.concat(pureRecursion(arr.slice(1)))
