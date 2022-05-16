@@ -58,6 +58,8 @@
         if(newArray.indexOf(binaryNum.indexOf(1,i)) === -1){
             newArray = [...newArray, binaryNum.indexOf(1,i)]
         }
+
+        console.log({newArray})
     }
 
 
