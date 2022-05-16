@@ -1,0 +1,39 @@
+// you can write to stdout for debugging purposes, e.g.
+// console.log('this is a debug message');
+
+function solution(N) {
+    // write your code in JavaScript (Node.js 8.9.4)
+
+    const result = (N >>> 0).toString(2)
+
+    let count = 0
+    for (let i = 0; i < result.length; i++) {
+        if (result[i] === '1') {
+            count++
+        }
+    }
+    if (count < 2) return 0
+    const checkForZero = result.includes('0')
+
+    if (!checkForZero) return 0
+
+    let beginCount = false
+    let max_binary_gap = 1
+    let countZeros = 0
+    for (let i = 0; i < result.length; i++) {
+        if (result[i] === '1') {
+            countZeros = 0
+            beginCount = true
+        }
+
+        if (beginCount && result[i] === '0') {
+            countZeros++
+        }
+
+        if (countZeros > max_binary_gap) {
+            max_binary_gap = countZeros
+        }
+    }
+
+    return max_binary_gap
+}
