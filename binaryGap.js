@@ -37,3 +37,5 @@ function solution(N) {
 
     return max_binary_gap
 }
+
+solution(105)
