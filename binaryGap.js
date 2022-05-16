@@ -45,7 +45,6 @@
 
     function binaryGap(N) {
         const binaryNum = N.toString(2)
-        let indexOfOneArray = []
         let newArray = []
         let newOne = null
         let gap = null
@@ -59,7 +58,6 @@
         }
 
         for(let i = 0; i < newArray.length; i++){
-            console.log('newArray elements', newArray[i])
             newOne = newArray[i]
 
             if(gap < newArray[i + 1] - (newOne + 1)){
