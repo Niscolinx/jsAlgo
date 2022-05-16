@@ -49,7 +49,15 @@
         let indexOfOneArray = []
         let newArray = []
         let newOne = null
+        let binaryGap = null
     }
+
+    for(let i = 0; i < binaryNum.length; i++){
+
+        if(newArray.indexOf())
+    }
+
+
 
     console.log(binaryGap(1045))
 })()
