@@ -46,6 +46,9 @@
     function binaryGap(N) {
 
         const binaryNum = N.toString(2)
+        let indexOfOneArray = []
+        let newArray = []
+        let newOne = null
     }
 
     console.log(binaryGap(1045))
