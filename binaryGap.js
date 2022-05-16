@@ -54,7 +54,6 @@
                 newArray = [...newArray, binaryNum.indexOf(1, i)]
             }
 
-            console.log({ newArray })
         }
 
         for(let i = 0; i < newArray.length; i++){
@@ -69,7 +68,6 @@
             return 0
         }
         else {
-            console.log({gap})
             return gap
         }
 
