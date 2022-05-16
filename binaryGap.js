@@ -44,25 +44,20 @@
     //More Efficient solution
 
     function binaryGap(N) {
-
         const binaryNum = N.toString(2)
         let indexOfOneArray = []
         let newArray = []
         let newOne = null
         let binaryGap = null
-    }
+        console.log({ binaryNum })
+        for (let i = 0; i < binaryNum.length; i++) {
+            if (newArray.indexOf(binaryNum.indexOf(1, i)) === -1) {
+                newArray = [...newArray, binaryNum.indexOf(1, i)]
+            }
 
-    console.log({binaryNum})
-    for(let i = 0; i < binaryNum.length; i++){
-
-        if(newArray.indexOf(binaryNum.indexOf(1,i)) === -1){
-            newArray = [...newArray, binaryNum.indexOf(1,i)]
+            console.log({ newArray })
         }
 
-        console.log({newArray})
+        console.log(binaryGap(1045))
     }
-
-
-
-    console.log(binaryGap(1045))
 })()
