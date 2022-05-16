@@ -48,7 +48,7 @@
         let indexOfOneArray = []
         let newArray = []
         let newOne = null
-        let binaryGap = null
+        let gap = null
         console.log({ binaryNum })
         for (let i = 0; i < binaryNum.length; i++) {
             if (newArray.indexOf(binaryNum.indexOf(1, i)) === -1) {
@@ -60,6 +60,19 @@
 
         for(let i = 0; i < newArray.length; i++){
             console.log('newArray elements', newArray[i])
+            newOne = newArray[i]
+
+            if(gap < newArray[i + 1] - (newOne + 1)){
+                gap = newArray[i + 1] - (newOne + 1)
+            }
+        }
+
+        if(gap === null) {
+            return 0
+        }
+        else {
+            console.log({gap})
+            return gap
         }
 
     }
