@@ -1,41 +1,52 @@
 // you can write to stdout for debugging purposes, e.g.
 // console.log('this is a debug message');
 
-function solution(N) {
-    // write your code in JavaScript (Node.js 8.9.4)
+;(() => {
+    function solution(N) {
+        // write your code in JavaScript (Node.js 8.9.4)
 
-    const result = (N >>> 0).toString(2)
+        const result = (N >>> 0).toString(2)
 
-    let count = 0
-    for (let i = 0; i < result.length; i++) {
-        if (result[i] === '1') {
-            count++
+        let count = 0
+        for (let i = 0; i < result.length; i++) {
+            if (result[i] === '1') {
+                count++
+            }
         }
+        if (count < 2) return 0
+        const checkForZero = result.includes('0')
+
+        if (!checkForZero) return 0
+
+        let beginCount = false
+        let max_binary_gap = 1
+        let countZeros = 0
+        for (let i = 0; i < result.length; i++) {
+            if (result[i] === '1') {
+                countZeros = 0
+                beginCount = true
+            }
+
+            if (beginCount && result[i] === '0') {
+                countZeros++
+            }
+
+            if (countZeros > max_binary_gap) {
+                max_binary_gap = countZeros
+            }
+        }
+
+        return max_binary_gap
     }
-    if (count < 2) return 0
-    const checkForZero = result.includes('0')
 
-    if (!checkForZero) return 0
+    // console.log(solution(1045))
 
-    let beginCount = false
-    let max_binary_gap = 1
-    let countZeros = 0
-    for (let i = 0; i < result.length; i++) {
-        if (result[i] === '1') {
-            countZeros = 0
-            beginCount = true
-        }
+    //More Efficient solution
 
-        if (beginCount && result[i] === '0') {
-            countZeros++
-        }
+    function binaryGap(N) {
 
-        if (countZeros > max_binary_gap) {
-            max_binary_gap = countZeros
-        }
+        const binaryNum = N.toString(2)
     }
 
-    return max_binary_gap
-}
-
-solution(105)
+    console.log(binaryGap(1045))
+})()
