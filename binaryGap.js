@@ -51,6 +51,7 @@
         let binaryGap = null
         console.log({ binaryNum })
         for (let i = 0; i < binaryNum.length; i++) {
+            console.log('index of binaryNum', binaryNum.indexOf(1,i))
             if (newArray.indexOf(binaryNum.indexOf(1, i)) === -1) {
                 newArray = [...newArray, binaryNum.indexOf(1, i)]
             }
@@ -58,6 +59,6 @@
             console.log({ newArray })
         }
 
-        console.log(binaryGap(1045))
     }
+    console.log(binaryGap(1045))
 })()
