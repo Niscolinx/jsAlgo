@@ -52,10 +52,11 @@
         let binaryGap = null
     }
 
+    console.log({binaryNum})
     for(let i = 0; i < binaryNum.length; i++){
 
         if(newArray.indexOf(binaryNum.indexOf(1,i)) === -1){
-            newArray = [...newArray, ]
+            newArray = [...newArray, binaryNum.indexOf(1,i)]
         }
     }
 
