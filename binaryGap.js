@@ -74,3 +74,40 @@
     }
     return binaryGap(1045)
 })()
+
+// you can write to stdout for debugging purposes, e.g.
+// console.log('this is a debug message');
+
+// you can write to stdout for debugging purposes, e.g.
+// console.log('this is a debug message');
+
+function solution(A) {
+    // write your code in JavaScript (Node.js 8.9.4)
+
+let obj = {}
+    for(let i = 0; i < A.length; i++){
+
+
+        if(!obj.hasOwnProperty(A[i])){
+            obj[A[i]] = 1
+        }
+        else{
+            obj[A[i]]++
+        }
+    }
+
+    console.log({obj})
+
+    const objKeys = Object.keys(obj)
+    const smallestInt = 1
+    for(let i = 0; i < objKeys.length - 1; i++){
+        console.log(i)
+        console.log('obj', objKeys[i],  objKeys[i + 1])
+
+        if( (Number(objKeys[i + 1]) - Number(objKeys[i])) !== 1 ){
+            console.log('objects', objKeys[i])
+            smallestInt = smallestInt + objKeys[i]
+           
+        }
+    }
+}
