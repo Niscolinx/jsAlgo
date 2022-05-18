@@ -13,7 +13,7 @@ function solution(A) {
 
     console.log({ obj })
 
-    const objKeys = Object.keys(obj)
+    const objKeys = Object.keys(obj) 
     let smallestInt = null
     for (let i = 0; i < objKeys.length - 1; i++) {
         if (Number(objKeys[i + 1]) - Number(objKeys[i]) !== 1) {
@@ -27,5 +27,6 @@ function solution(A) {
     }
 
     console.log({ smallestInt })
+    console.log("working on it")
     return smallestInt
 }
