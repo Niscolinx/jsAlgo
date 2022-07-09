@@ -24,6 +24,7 @@
 
 (() => {
 function doStuff(text) {
+    console.log({text})
     const lowerCased = text.toLocaleLowerCase()
     const words = lowerCased.split(' ')
     words.reverse()
@@ -46,6 +47,7 @@ function doStuff(text) {
         result += ', '
     }
 
+    console.log({result})
     return console.log(result.slice(0, -2))
 }
 
