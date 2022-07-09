@@ -47,8 +47,9 @@ function doStuff(text) {
         result += ', '
     }
 
-    console.log({result})
-    return console.log(result.slice(0, -2))
+    console.log({result}, {trimmedWords})
+    return result.slice(0, -2)
+   // return console.log(result.slice(0, -2))
 }
 
 console.log('hello', doStuff('hello'))
