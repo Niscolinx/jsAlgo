@@ -29,6 +29,7 @@ function doStuff(text) {
     const words = lowerCased.split(' ')
     words.reverse()
 
+
     const trimmedWords = []
     for (let i in words) {
         trimmedWords.push(words[i].trim())
@@ -52,7 +53,7 @@ function doStuff(text) {
    // return console.log(result.slice(0, -2))
 }
 
-console.log('hello', doStuff('hello'))
+console.log('hello', doStuff("heLLo, world, how is everything"))
 })()
 
 
