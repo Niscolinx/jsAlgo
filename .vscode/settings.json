@@ -1,5 +1,6 @@
 {
     "vscode-janus-debug.uploadOnSave": [
         "adjacencyList"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
