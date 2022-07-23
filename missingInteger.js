@@ -30,3 +30,5 @@ function solution(A) {
     console.log("working on it")
     return smallestInt
 }
+
+
