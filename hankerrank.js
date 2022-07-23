@@ -3,18 +3,33 @@
         let l_to_r = 0
         let r_to_l = 0
         for (let i = 0; i < arr.length; i++) {
-            for (let j = 0; j < arr[i].length; j++) {
-                l_to_r += arr[i][j]
-                r_to_l += arr[i]
-
-                console.log(arr[i][j])
+            if (i === 0) {
+                l_to_r += arr[i][0]
+                r_to_l += arr[i][arr[i].length - 1]
             }
+            if (i === 1) {
+                l_to_r += arr[i][1]
+                r_to_l += arr[i][1]
+            }
+
+            if (i === 2) {
+                r_to_l += arr[i][0]
+                l_to_r += arr[i][arr[i].length - 1]
+            }
+
         }
+
+        const result = Math.abs(l_to_r - r_to_l)
+
+
+        return result
     }
 
     return diagonalDifference([
-        [1, 2, 3],
+        [11, 2, 4],
         [4, 5, 6],
-        [7, 8, 9],
+        [10, 8, -12],
     ])
 })()
+
+
