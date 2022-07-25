@@ -59,9 +59,15 @@
         for (let i = 0; i < n; i++) {
             let str = ''
             for (let j = 0; j < n; j++) {
-               console.log({i,j})
+                console.log({n, i})
+                console.log(n-i-1)
+                if (j < n - i - 1) {
+                    str += ' '
+                } else {
+                    str += '#'
+                }
             }
-            console.log({str})
+            console.log(str)
         }
 
     }
