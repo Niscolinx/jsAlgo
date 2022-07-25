@@ -59,18 +59,25 @@
         for (let i = 0; i < n; i++) {
             let str = ''
             for (let j = 0; j < n; j++) {
-                console.log({n, i})
-                console.log(n-i-1)
                 if (j < n - i - 1) {
-                    str += ' '
+                    str += ''
                 } else {
                     str += '#'
                 }
             }
             console.log(str)
         }
-
     }
 
-    staircase(4)
+    //staircase(4)
+
+    //******************** */
+    //Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+
+function miniMaxSum(arr) {
+    // Write your code here
+}
+
+
+miniMaxSum([1, 3, 5, 7, 9])
 })()
