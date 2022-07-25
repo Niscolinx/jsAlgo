@@ -78,15 +78,18 @@
         // Write your code here
 
         let add = 0
+        const store = []
         for (let i = 0; i < arr.length; i++) {
-            const removed = arr.splice(0, i + 1)
-            console.log({removed})
+            const removed = arr.splice(0, i + 1, arr[i])
             for (let j = 0; j < arr.length; j++) {
-                console.log(arr[j])
                 add += arr[j]
             }
+
+            store.push(add)  
+            
         }
 
+        console.log({store})
         // console.log('16' + ' ' + '34')
     }
 
