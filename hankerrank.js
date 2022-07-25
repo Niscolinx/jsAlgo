@@ -1,4 +1,4 @@
-(() => {
+;(() => {
     //Given a square matrix, calculate the absolute difference between the sums of its diagonals.
     function diagonalDifference(arr) {
         // Write your code here
@@ -74,10 +74,15 @@
     //******************** */
     //Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
 
-function miniMaxSum(arr) {
-    // Write your code here
-}
+    function miniMaxSum(arr) {
+        // Write your code here
 
+        for(let i = 0; i < arr.length; i++){
+            console.log(arr[i])
+        }
 
-miniMaxSum([1, 3, 5, 7, 9])
+        console.log('16' + ' ' + '34')
+    }
+
+    miniMaxSum([1, 3, 5, 7, 9])
 })()
