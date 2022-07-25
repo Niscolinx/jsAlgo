@@ -80,12 +80,13 @@
         let add = 0
         const store = []
         for (let i = 0; i < arr.length; i++) {
-            const removed = arr.splice(0, i + 1, arr[i])
+            const removed = arr.shift()
             for (let j = 0; j < arr.length; j++) {
                 add += arr[j]
             }
 
-            store.push(add)  
+            store.push(add) 
+            console.log({arr})
             
         }
 
