@@ -77,16 +77,12 @@
     function miniMaxSum(arr) {
         // Write your code here
 
-        // for(let i = 0; i < arr.length; i++){
+        for (let i = 0; i < arr.length; i++) {
+            arr.splice(0, i)
+            for (let j = 0; j < arr.length; j++) {}
+        }
 
-        //     for(let j = 0; j < arr.length; j++){
-
-        //     }
-        // }
-
-        console.log(arr.splice(0, 2, 3))
-        console.log({arr})
-        console.log('16' + ' ' + '34')
+        // console.log('16' + ' ' + '34')
     }
 
     miniMaxSum([1, 3, 5, 7, 9])
