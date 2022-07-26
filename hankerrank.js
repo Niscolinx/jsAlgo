@@ -93,7 +93,8 @@
 
         const min = Math.min(...store)
         const max = Math.max(...store)
-        // console.log('16' + ' ' + '34')
+
+        console.log(min + ' ' + max)
     }
 
     miniMaxSum([1, 2, 3, 4, 5])
