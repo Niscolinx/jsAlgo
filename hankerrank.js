@@ -137,7 +137,6 @@
                 
             }
         } else {
-            console.log('PM')
              if (split[0] !== '12') {
                  split[0] = (Number(split[0]) + 12).toString()
              }
