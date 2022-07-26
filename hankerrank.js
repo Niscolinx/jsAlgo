@@ -80,20 +80,24 @@
         let add = 0
         const store = []
         for (let i = 0; i < arr.length; i++) {
-            const removed = arr.splice(i, arr[i])
             for (let j = 0; j < arr.length; j++) {
-                add += arr[j]
+                if (i === j) {
+                    console.log("don't push", i, j)
+                } else {
+                    console.log('push', i, j)
+                    add += arr[j]
+                    console.log({ add })
+                }
             }
 
-            store.push(add) 
-            
-            console.log({arr})
-            
+            store.push(add)
+
+            console.log('first round', i, store)
         }
 
-        console.log({store})
+        //console.log({ store })
         // console.log('16' + ' ' + '34')
     }
 
-    miniMaxSum([1, 3, 5, 7, 9])
+    miniMaxSum([1, 2, 3, 4, 5])
 })()
