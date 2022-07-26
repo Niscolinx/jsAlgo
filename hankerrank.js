@@ -106,14 +106,17 @@
         let initial = 0
         let count = []
         for(let i = 0; i < candles.length; i++){
+            console.log({initial})
             if(candles[i] >= initial){
+                console.log(candles[i])
                 initial = candles[i]
                 count.push(candles[i])
             }
         }
 
-        console.log({count})
+        console.log(count.length)
+        return count.length
     }
 
-    birthdayCakeCandles(4,4,1,3)
+    birthdayCakeCandles([44, 53, 31, 27, 77, 60, 66, 77, 26, 36])
 })()
