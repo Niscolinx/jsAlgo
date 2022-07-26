@@ -81,21 +81,18 @@
         const store = []
         for (let i = 0; i < arr.length; i++) {
             for (let j = 0; j < arr.length; j++) {
-                if (i === j) {
-                    console.log("don't push", i, j)
-                } else {
-                    console.log('push', i, j)
+                if (i !== j) {
                     add += arr[j]
-                    console.log({ add })
                 }
             }
 
             store.push(add)
+            add = 0
 
-            console.log('first round', i, store)
         }
 
-        //console.log({ store })
+        const min = Math.min(...store)
+        const max = Math.max(...store)
         // console.log('16' + ' ' + '34')
     }
 
