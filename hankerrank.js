@@ -102,6 +102,17 @@
 
     function birthdayCakeCandles(candles) {
         // Write your code here
+
+        let initial = 0
+        let count = []
+        for(let i = 0; i < candles.length; i++){
+            if(candles[i] >= initial){
+                initial = candles[i]
+                count.push(candles[i])
+            }
+        }
+
+        console.log({count})
     }
 
     birthdayCakeCandles(4,4,1,3)
