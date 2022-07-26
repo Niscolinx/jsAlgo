@@ -128,8 +128,9 @@
         const splitAM = s.split('AM')
         const splitPM = s.split('PM')
         console.log({splitAM})
+        console.log({splitPM})
     }
 
-    timeConversion('12:01:00AM')
+    timeConversion('12:01:00PM')
 
 })()
