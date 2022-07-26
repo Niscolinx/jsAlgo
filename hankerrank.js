@@ -125,12 +125,29 @@
 
     function timeConversion(s) {
         // Write your code here
-        const splitAM = s.split('AM')
-        const splitPM = s.split('PM')
-        console.log({splitAM})
-        console.log({splitPM})
+        const split = s.split('M').join('').split(':')
+
+        const timeFormat = split[split.length - 1]
+
+        if (timeFormat.includes('A')) {
+           
+            console.log(split[0])
+            if(split[0] === '12'){
+                split[0] = '00'
+                
+            }
+        } else {
+            console.log('PM')
+             if (split[0] !== '12') {
+                 split[0] = (Number(split[0]) + 12).toString()
+             }
+        }
+
+         const removedFormat = timeFormat.slice(0, 2)
+         const militaryTime = split.splice(0, 2).concat(removedFormat).join(':')
+
+        return militaryTime
     }
 
-    timeConversion('12:01:00PM')
-
+    timeConversion('08:01:00AM')
 })()
