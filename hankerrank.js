@@ -125,10 +125,11 @@
 
     function timeConversion(s) {
         // Write your code here
-        const split = s.split(':')
-        console.log({split})
+        const splitAM = s.split('AM')
+        const splitPM = s.split('PM')
+        console.log({splitAM})
     }
 
-    timeConversion('12:01:00PM')
+    timeConversion('12:01:00AM')
 
 })()
