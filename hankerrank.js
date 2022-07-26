@@ -103,19 +103,21 @@
     function birthdayCakeCandles(candles) {
         // Write your code here
 
-        let initial = 0
         let count = []
-        for(let i = 0; i < candles.length; i++){
-            console.log({initial})
-            if(candles[i] >= initial){
-                console.log(candles[i])
-                initial = candles[i]
-                count.push(candles[i])
+        
+        const sorted = candles.sort((a, b) => b - a)
+
+        for(let i = 0; i < sorted.length; i++){
+            if(sorted[i] === sorted[0]){
+                count.push(sorted[i])
+            }
+            else{
+                break
             }
         }
 
-        console.log(count.length)
-        return count.length
+       return count.length
+
     }
 
     birthdayCakeCandles([44, 53, 31, 27, 77, 60, 66, 77, 26, 36])
