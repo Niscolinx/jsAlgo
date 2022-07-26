@@ -104,21 +104,31 @@
         // Write your code here
 
         let count = []
-        
+
         const sorted = candles.sort((a, b) => b - a)
 
-        for(let i = 0; i < sorted.length; i++){
-            if(sorted[i] === sorted[0]){
+        for (let i = 0; i < sorted.length; i++) {
+            if (sorted[i] === sorted[0]) {
                 count.push(sorted[i])
-            }
-            else{
+            } else {
                 break
             }
         }
 
-       return count.length
-
+        return count.length
     }
 
-    birthdayCakeCandles([44, 53, 31, 27, 77, 60, 66, 77, 26, 36])
+    // birthdayCakeCandles([44, 53, 31, 27, 77, 60, 66, 77, 26, 36])
+
+    //Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.
+    //Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock. - 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.
+
+    function timeConversion(s) {
+        // Write your code here
+        const date = new Date(s)
+        console.log({date})
+    }
+
+    timeConversion('12:01:00PM')
+
 })()
