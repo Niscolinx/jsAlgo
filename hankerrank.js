@@ -125,8 +125,8 @@
 
     function timeConversion(s) {
         // Write your code here
-        const date = new Date(s)
-        console.log({date})
+        const split = s.split(':')
+        console.log({split})
     }
 
     timeConversion('12:01:00PM')
