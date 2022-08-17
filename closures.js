@@ -1,11 +1,21 @@
+let count = 9
 
+function outer() {
+    function counter() {
+        count++
 
-let count = 0 
+        console.log('counter', count)
 
-const counter = () => {
-    count++
+        function another() {
+            count++
+            console.log('another', count)
+        }
 
-    console.log(count)
+        return another()
+    }
+    let count = 0
+
+    return counter
 }
 
-counter()
+outer()()
