@@ -36,5 +36,33 @@
         return longWords.reverse().join(', ')
     }
 
-    console.log('result', doStuff('heLLoworld world how is everything'))
+    // console.log('result', doStuff('heLLoworld world how is everything'))
+
+    //The conversion time in "yyyy-mm-dd hh:mm:ss+|-hh:mm" format.
+
+    //timezone is the difference between the local time and UTC time.
+    //The timezone is represented as a string of the form "+/-hh:mm".
+    //For example, the timezone offset for EST is "-05:00".
+
+    //The date is represented as a string in the format "yyyy-mm-dd".
+    const date = new Date()
+    const year = date.getFullYear()
+    const month = date.getMonth() 
+    const day = date.getDate()
+    const hours = date.getHours()
+    const minutes = date.getMinutes()
+    const seconds = date.getSeconds()
+    const timezone = date.getTimezoneOffset()
+    
+    const timezoneString = `${timezone > 0 ? '-' : '+'}${Math.floor(timezone / 60)}:${timezone % 60}`
+
+    console.log(`${year}-${month}-${day} ${hours}:${minutes}:${seconds}${timezoneString}`)
+
+    console.log({timezone})
+    
+    
+    // const date = new Date().toLocaleString('en-US', {
+    //     timeZone: 'yyyy-mm-dd',
+    // })
+    // console.log(date)
 })()
