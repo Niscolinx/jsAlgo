@@ -20,49 +20,68 @@
 //     console.log(charCount('this is h234appeninuuug right n..ow'))
 // })()
 
-;(() => {
-    function doStuff(text) {
-        console.log({ text })
-        const lowerCased = text.toLocaleLowerCase()
-        const words = lowerCased.split(' ')
+// ;(() => {
+//     function doStuff(text) {
+//         console.log({ text })
+//         const lowerCased = text.toLocaleLowerCase()
+//         const words = lowerCased.split(' ')
 
-        const longWords = []
-        for (let i in words) {
-            if (words[i].length > 5) {
-                longWords.push(words[i])
-            }
-        }
+//         const longWords = []
+//         for (let i in words) {
+//             if (words[i].length > 5) {
+//                 longWords.push(words[i])
+//             }
+//         }
 
-        return longWords.reverse().join(', ')
+//         return longWords.reverse().join(', ')
+//     }
+
+//     // console.log('result', doStuff('heLLoworld world how is everything'))
+
+//     //The conversion time in "yyyy-mm-dd hh:mm:ss+|-hh:mm" format.
+
+//     //timezone is the difference between the local time and UTC time.
+//     //The timezone is represented as a string of the form "+/-hh:mm".
+//     //For example, the timezone offset for EST is "-05:00".
+
+//     //The date is represented as a string in the format "yyyy-mm-dd".
+//     const date = new Date()
+//     const year = date.getFullYear()
+//     const month = date.getMonth() 
+//     const day = date.getDate()
+//     const hours = date.getHours()
+//     const minutes = date.getMinutes()
+//     const seconds = date.getSeconds()
+//     const timezone = date.getTimezoneOffset()
+    
+//     const timezoneString = `${timezone > 0 ? '-' : '+'}${Math.floor(timezone / 60)}:${timezone % 60}`
+
+//     console.log(`${year}-${month}-${day} ${hours}:${minutes}:${seconds}${timezoneString}`)
+
+//     console.log({timezone})
+    
+    
+//     // const date = new Date().toLocaleString('en-US', {
+//     //     timeZone: 'yyyy-mm-dd',
+//     // })
+//     // console.log(date)
+// })()
+
+
+(() => {
+
+
+    function minimumMoves(arr1, arr2){
+        // Write your code here
+      let compareArr1 = []
+    let compareArr2 = []
+    for(let i = 0; i < arr1.length; i+2){
+        compareArr1.push(arr1[i], arr2[i])
+    }
+    for(let i = 0; i < arr2.length; i+2){
+        compareArr2.push(arr1[i], arr2[i])
     }
 
-    // console.log('result', doStuff('heLLoworld world how is everything'))
 
-    //The conversion time in "yyyy-mm-dd hh:mm:ss+|-hh:mm" format.
-
-    //timezone is the difference between the local time and UTC time.
-    //The timezone is represented as a string of the form "+/-hh:mm".
-    //For example, the timezone offset for EST is "-05:00".
-
-    //The date is represented as a string in the format "yyyy-mm-dd".
-    const date = new Date()
-    const year = date.getFullYear()
-    const month = date.getMonth() 
-    const day = date.getDate()
-    const hours = date.getHours()
-    const minutes = date.getMinutes()
-    const seconds = date.getSeconds()
-    const timezone = date.getTimezoneOffset()
-    
-    const timezoneString = `${timezone > 0 ? '-' : '+'}${Math.floor(timezone / 60)}:${timezone % 60}`
-
-    console.log(`${year}-${month}-${day} ${hours}:${minutes}:${seconds}${timezoneString}`)
-
-    console.log({timezone})
-    
-    
-    // const date = new Date().toLocaleString('en-US', {
-    //     timeZone: 'yyyy-mm-dd',
-    // })
-    // console.log(date)
+    }
 })()
