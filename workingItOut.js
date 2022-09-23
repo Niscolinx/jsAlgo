@@ -73,15 +73,18 @@
 
     function minimumMoves(arr1, arr2){
         // Write your code here
-      let compareArr1 = []
-    let compareArr2 = []
-    for(let i = 0; i < arr1.length; i+2){
-        compareArr1.push(arr1[i], arr2[i])
-    }
-    for(let i = 0; i < arr2.length; i+2){
-        compareArr2.push(arr1[i], arr2[i])
-    }
+        let compareArr = []
+        for(let i = 0; i < arr1.length; i++){
+            compareArr.push(arr1[i], arr2[i])
+        }
+       
 
+        console.log(compareArr)
 
     }
+
+    const arr1 = [123, 543]
+    const arr2 = [321, 279]
+
+   minimumMoves(arr1, arr2)
 })()
