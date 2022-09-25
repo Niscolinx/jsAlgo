@@ -47,44 +47,41 @@
 //     //The date is represented as a string in the format "yyyy-mm-dd".
 //     const date = new Date()
 //     const year = date.getFullYear()
-//     const month = date.getMonth() 
+//     const month = date.getMonth()
 //     const day = date.getDate()
 //     const hours = date.getHours()
 //     const minutes = date.getMinutes()
 //     const seconds = date.getSeconds()
 //     const timezone = date.getTimezoneOffset()
-    
+
 //     const timezoneString = `${timezone > 0 ? '-' : '+'}${Math.floor(timezone / 60)}:${timezone % 60}`
 
 //     console.log(`${year}-${month}-${day} ${hours}:${minutes}:${seconds}${timezoneString}`)
 
 //     console.log({timezone})
-    
-    
+
 //     // const date = new Date().toLocaleString('en-US', {
 //     //     timeZone: 'yyyy-mm-dd',
 //     // })
 //     // console.log(date)
 // })()
 
-
-(() => {
-
-
+;(() => {
     function minimumMoves(arr1, arr2){
-        // Write your code here
-        let compareArr = []
-        for(let i = 0; i < arr1.length; i++){
-            compareArr.push(arr1[i], arr2[i])
-        }
-       
+            // There are two arrays of integers, arr1 and arr2.
+            // One move is defined as an increment or decrement of one element in
+            // array. Determine the minimum number of moves to match{' '}
+            // arr1 with arr2. No reordering of the digits is
+            // allowed.
 
-        console.log(compareArr)
+            // Write your code here
+           
+
 
     }
 
     const arr1 = [123, 543]
     const arr2 = [321, 279]
 
-   minimumMoves(arr1, arr2)
+    console.log(minimumMoves(arr1, arr2))
 })()
