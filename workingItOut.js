@@ -68,13 +68,6 @@
 
 ;(() => {
     function minimumMoves(arr1, arr2){
-            // There are two arrays of integers, arr1 and arr2.
-            // One move is defined as an increment or decrement of one element in
-            // array. Determine the minimum number of moves to match{' '}
-            // arr1 with arr2. No reordering of the digits is
-            // allowed.
-
-            // Write your code here
            
 
 
