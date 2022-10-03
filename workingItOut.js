@@ -69,7 +69,7 @@
 ;(() => {
     function minimumMoves(arr1, arr2){
            
-        console.log(arr2)
+        console.log(arr2, arr1)
 
     }
 
