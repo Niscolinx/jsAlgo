@@ -75,5 +75,4 @@
     const arr1 = [123, 543]
     const arr2 = [321, 279]
 
-    console.log(minimumMoves(arr1, arr2))
 })()
