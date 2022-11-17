@@ -78,6 +78,7 @@
                 }
             }
         }
+        return count;
     }
 
     const arr1 = [123, 543]
