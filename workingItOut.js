@@ -72,7 +72,6 @@
         console.log({arr1, arr2})
         let count = 0;
      
-        console.log(count)
 
     }
 
