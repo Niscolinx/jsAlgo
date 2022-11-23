@@ -15,13 +15,10 @@
 // Right sum = nums[4] + nums[5] = 5 + 6 = 11
 
 const pivotIndex = function (nums) {
-    const leftNode = nums[0]
-    const rightNode = nums[nums.length - 1]
+    const leftNode = 0
+    const rightNode = 0
 
-    for (let i = 1; i < nums.length; i++) {
-        leftNode += nums[i]
-        rightNode += nums.at(-i)
-    }
+    
 }
 
 console.log(pivotIndex([1, 7, 3, 6, 5, 6]))
