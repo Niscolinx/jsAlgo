@@ -7,7 +7,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/Dijksdra's Algorithm.js",
+            "program": "${workspaceFolder}/leetcode/findPivotIndex.js",
             "cwd": "${workspaceFolder}",
             "skipFiles": [
                 "<node_internals>/**"
