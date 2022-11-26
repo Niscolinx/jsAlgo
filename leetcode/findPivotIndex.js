@@ -15,22 +15,17 @@
 // Right sum = nums[4] + nums[5] = 5 + 6 = 11
 
 const pivotIndex = function (nums) {
-    let totalSum = 0
-
+   
+    let left = 0;
+    let right = nums.reduce((a, b) => a + b, 0);
     for (let i = 0; i < nums.length; i++) {
-        totalSum += nums[i]
+        right -= nums[i];
+        if (left === right) {
+            return i;
+        }
+        left += nums[i];
     }
-
-    let leftSum = 0
-
-    for (let i = 0; i < nums.length; i++) {
-        
-        if(leftSum * 2 === totalSum - nums[i]) return i
-
-        leftSum += nums[i]
-    }
-
-    return -1
+    return -1;
 }
 
 console.log(pivotIndex([1, 7, 3, 6, 5, 6]))
