@@ -39,6 +39,7 @@ const findPivotIndex = function (nums) {
     let right = nums.reduce((a, b) => a + b, 0)
 
     console.log({right})
+
     for (let i = 0; i < nums.length; i++) {
         right -= nums[i]
         if (left === right) {
