@@ -30,6 +30,8 @@ const isIsomorphic = function (s, t) {
 
     console.log({firstString, secondString})
 
+    console.log(Object.keys(firstString, secondString))
+
     const reduceToAnArray = (obj) => {
         return Object.values(obj).reduce((prev, curr) => {
             return prev.concat(curr)
