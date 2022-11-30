@@ -28,9 +28,10 @@ const isIsomorphic = function (s, t) {
         }
     }
 
-    console.log({firstString, secondString})
 
-    console.log(Object.keys(firstString, secondString))
+    if(Object.keys(firstString).length !== Object.keys(secondString).length){
+        return false
+    }
 
     const reduceToAnArray = (obj) => {
         return Object.values(obj).reduce((prev, curr) => {
