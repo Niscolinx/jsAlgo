@@ -10,7 +10,7 @@ const isIsomorphic = function (s, t) {
     if(s.length !== t.length){
         return false
     }
-    
+
     let firstString = {}
     let secondString = {}
     for (let i = 0; i < s.length; i++) {
@@ -28,6 +28,7 @@ const isIsomorphic = function (s, t) {
         }
     }
 
+    console.log({firstString, secondString})
 
     const reduceToAnArray = (obj) => {
         return Object.values(obj).reduce((prev, curr) => {
