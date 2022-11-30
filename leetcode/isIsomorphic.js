@@ -4,27 +4,49 @@
 
 // All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
 
+
 const isIsomorphic = function (s, t) {
+
+    if(s.length !== t.length){
+        return false
+    }
+    
     let firstString = {}
     let secondString = {}
     for (let i = 0; i < s.length; i++) {
         if (firstString[s[i]]) {
             firstString[s[i]] = [...firstString[s[i]], i]
-        }
-        else{
+        } else {
             firstString[s[i]] = [i]
         }
     }
     for (let i = 0; i < t.length; i++) {
-        if (store[s[i]]) {
-            store[s[i]] = [...store[s[i]], i]
-        }
-        else{
-            store[s[i]] = [i]
+        if (secondString[t[i]]) {
+            secondString[t[i]] = [...secondString[t[i]], i]
+        } else {
+            secondString[t[i]] = [i]
         }
     }
 
-    return Object.values(store)
+
+    const reduceToAnArray = (obj) => {
+        return Object.values(obj).reduce((prev, curr) => {
+            return prev.concat(curr)
+        }, [])
+    }
+
+    const firstStringIndexValues = reduceToAnArray(firstString)
+    const secondStringIndexValues = reduceToAnArray(secondString)
+
+
+
+
+    const isIsoMorphic = firstStringIndexValues.every((item, index) => {
+        return item === secondStringIndexValues[index]
+    })
+
+
+    return isIsoMorphic
 }
 
-console.log(isIsomorphic('egg', 'add'))
+console.log(isIsomorphic('foo', 'bar'))
