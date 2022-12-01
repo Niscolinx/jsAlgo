@@ -28,8 +28,6 @@ const isIsomorphic = function (s, t) {
         }
     }
 
-    console.log({firstString, secondString})
-
 
     if(Object.keys(firstString).length !== Object.keys(secondString).length){
         return false
@@ -46,13 +44,14 @@ const isIsomorphic = function (s, t) {
 
 
 
-
     const isIsoMorphic = firstStringIndexValues.every((item, index) => {
         return item === secondStringIndexValues[index]
     })
+
+     //const isIsoMorphic = firstString
 
 
     return isIsoMorphic
 }
 
-console.log(isIsomorphic('13', '42'))
+console.log(isIsomorphic('13', '32'))
