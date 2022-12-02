@@ -54,4 +54,4 @@ const isIsomorphic = function (s, t) {
     return isIsoMorphic
 }
 
-console.log(isIsomorphic('13', '32'))
+console.log(isIsomorphic('13', '5342'))
