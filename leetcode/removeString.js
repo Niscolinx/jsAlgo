@@ -10,13 +10,11 @@ const removeString = (str1, str2) => {
 
         return lowerCaseStr1.concat(getFirstSixChar)
     }
-
-
     return lowerCaseStr1.concat(lowerCaseStr2)
 
 
 }
 
 console.log(
-    removeString('Praise', 'Cosinssdf')
+    removeString('Praffdfffffffff', 'Collinstyuuuu')
 )
