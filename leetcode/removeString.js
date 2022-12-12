@@ -8,6 +8,7 @@ const removeString = (str1, str2) => {
 
         const getFirstSixChar = lowerCaseStr2.slice(0, lowerCaseStr1.length)
 
+
         return lowerCaseStr1.concat(getFirstSixChar)
     }
     return lowerCaseStr1.concat(lowerCaseStr2)
@@ -16,5 +17,5 @@ const removeString = (str1, str2) => {
 }
 
 console.log(
-    removeString('Praffdfffffffff', 'Collinstyuuuu')
+    removeString('Praffdfffff', 'Collinstyuuuu')
 )
