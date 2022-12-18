@@ -17,5 +17,5 @@ const removeString = (str1, str2) => {
 }
 
 console.log(
-    removeString('Prafffff', 'Collins')
+    removeString('Prafff', 'Collins')
 )
