@@ -12,7 +12,6 @@ function removeSmallestNum(n, arr) {
         let index = 0
         for (let i = 0; i < arr.length - 1; i++) {
             smallest = arr[index]
-            console.log(smallest, 'arr[i+ 1]', arr[i + 1])
             if (smallest > arr[i + 1]) {
                 smallest = arr[i + 1]
                 index = i + 1
@@ -30,7 +29,31 @@ function removeSmallestNum(n, arr) {
         const smallestIndex = findSmallet()
         arr.splice(smallestIndex, 1)
     }
+    console.log('answer one', arr)
     return arr
 }
 
 removeSmallestNum(-3, [3, 5, 1, 2, 8, 6])
+
+function removeSmallest(n, arr) {
+    if (n < 0) {
+        return arr
+    }
+    let smallest = Infinity
+    let smallestIndices = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i]
+            smallestIndices = [i]
+        } else if (arr[i] === smallest) {
+            smallestIndices.push(i)
+        }
+    }
+    for (let i = 0; i < n && smallestIndices.length > 0; i++) {
+        let indexToRemove = smallestIndices.shift()
+        arr.splice(indexToRemove, 1)
+    }
+    console.log('answer two', arr)
+    return arr
+}
+removeSmallest(-3, [3, 5, 1, 2, 8, 6])
