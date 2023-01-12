@@ -29,6 +29,7 @@ const isIsomorphic = function (s, t) {
     }
 
 
+
     if(Object.keys(firstString).length !== Object.keys(secondString).length){
         return false
     }

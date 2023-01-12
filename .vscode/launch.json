@@ -7,7 +7,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/leetcode/isIsomorphic.js",
+            "program": "${workspaceFolder}/other/smallestNum.js",
             //"program":   "${workspaceFolder}/**/*.js",
             "cwd": "${workspaceFolder}",
             "skipFiles": [
