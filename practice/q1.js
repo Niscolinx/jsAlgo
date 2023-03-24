@@ -11,7 +11,11 @@ const givenArr = [13, 34, 2, 0, 5, 9, 1, 5]
 const squareArrAndSort = (arr) => {
     // loop through the arr and square each item
     const updatedArr = []
-    for (let item of givenArr) {
+
+
+
+    for (let i = 0; i < arr.length; i++) {
+        const item = arr[i]
         const square = Math.pow(item, 2)
 
         updatedArr.push(square)
