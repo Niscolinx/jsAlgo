@@ -7,7 +7,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/other/smallestNum.js",
+            "program": "${workspaceFolder}/practice/q1.js",
             //"program":   "${workspaceFolder}/**/*.js",
             "cwd": "${workspaceFolder}",
             "skipFiles": [
