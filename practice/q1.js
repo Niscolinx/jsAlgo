@@ -16,10 +16,10 @@ const squareArrAndSort = (arr) => {
         const item = arr[i]
         const square = Math.pow(item, 2)
 
+        debugger
         if (updatedArr.length < 1) {
             updatedArr.push(square)
         }
-
         //check if the previous number in the arr is greater than arr[i]
         else if (updatedArr[i - 1] > square) {
             //If it's greater then, then swap
