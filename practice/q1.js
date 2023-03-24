@@ -1,4 +1,5 @@
-const givenArr = [3, 5, 7, 8, 9, 9, 12, 17]
+// const givenArr = [3, 5, 7, 8, 9, 9, 12, 17]
+const givenArr = [13, 34, 2, 0, 5, 9, 1, 5]
 
 //First solution
 // const updatedArr = givenArr
