@@ -21,15 +21,14 @@ const squareArrAndSort = (arr) => {
         }
 
         //check if the previous number in the arr is greater than arr[i]
-        //If it's greater then, then swap
-
-
-        else if( updatedArr[i - 1] > item){
-
+        else if (updatedArr[i - 1] > square) {
+            //If it's greater then, then swap
+            const temp = updatedArr[i - 1]
+            updatedArr[i - 1] = square
+            updatedArr.push(square)
+        } else {
+            updatedArr.push(square)
         }
-
-
-        updatedArr.push(square)
     }
 
     return updatedArr
