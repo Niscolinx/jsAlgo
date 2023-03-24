@@ -8,14 +8,15 @@ const givenArr = [3, 5, 7, 8, 9, 9, 12, 17]
 //     .sort((a, b) => a - b)
 
 const squareArrAndSort = (arr) => {
-
-   // loop through the arr and square each item
+    // loop through the arr and square each item
     const updatedArr = []
-   for(let item of givenArr){
-        const square = Math.sqrt(item)
+    for (let item of givenArr) {
+        const square = Math.pow(item, 2)
+
         updatedArr.push(square)
     }
 
-   // return the sorted arr
-
+    return updatedArr
 }
+
+console.log(squareArrAndSort(givenArr))
