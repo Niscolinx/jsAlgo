@@ -13,6 +13,7 @@ const squareArrAndSort = (arr) => {
 
     for (let i = 0; i < arr.length; i++) {
         //if the arr is empty push the first number
+        const item = arr[i]
         const square = Math.pow(item, 2)
 
         if (updatedArr.length < 1) {
@@ -23,11 +24,10 @@ const squareArrAndSort = (arr) => {
         //If it's greater then, then swap
 
 
-        else if( updatedArr[i - 1]){
+        else if( updatedArr[i - 1] > item){
 
         }
 
-        const item = arr[i]
 
         updatedArr.push(square)
     }
