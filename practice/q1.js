@@ -12,11 +12,13 @@ const squareArrAndSort = (arr) => {
     // loop through the arr and square each item
     const updatedArr = []
 
-
-
     for (let i = 0; i < arr.length; i++) {
-        const item = arr[i]
         const square = Math.pow(item, 2)
+        
+        if (updatedArr.length < 1) {
+            updatedArr.push(square)
+        }
+        const item = arr[i]
 
         updatedArr.push(square)
     }
