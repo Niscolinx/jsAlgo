@@ -13,6 +13,7 @@ const squareArrAndSort = (arr) => {
     const updatedArr = []
    for(let item of givenArr){
         const square = Math.sqrt(item)
+        updatedArr.push(square)
     }
 
    // return the sorted arr
