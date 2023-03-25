@@ -34,7 +34,10 @@ const squareArrAndSort = (arr) => {
     //loop through the arr 
     for(let i =0; i < arr.length; i++){
 
-        //Make two pointers, one pointer to the first item and the other pointing to the last item
+        //Make two pointers, one pointer to the first item and the other pointing to the last item of the  arr
+
+        let leftPointer = arr[0]
+        let rightPointer = arr[arr.length - 1]
     }
 
 }
