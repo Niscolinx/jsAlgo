@@ -1,5 +1,5 @@
 // const givenArr = [3, 5, 7, 8, 9, 9, 12, 17]
-const givenArr = [13, 34, 2, 0, 5, 9, 1, 5]
+const givenArr = [5, 3, -1, 4, 2, 0]
 
 //First solution
 // const updatedArr = givenArr
@@ -8,7 +8,6 @@ const givenArr = [13, 34, 2, 0, 5, 9, 1, 5]
 //     })
 //     .sort((a, b) => a - b)
 
-const arr1 = [5, 3, -1, 4, 2, 0]
 const squareArrAndSort = (arr) => {
     for (let i = 0; i < arr.length; i++) {
         for (let j = i + 1; j < arr.length; j++) {
@@ -24,4 +23,4 @@ const squareArrAndSort = (arr) => {
     return arr
 }
 
-console.log(squareArrAndSort(arr1))
+console.log(squareArrAndSort(givenArr))
