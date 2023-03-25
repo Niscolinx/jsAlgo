@@ -12,20 +12,20 @@ const arr1 = [5, 3, -1, 4, 2, 0]
 const squareArrAndSort = (arr) => {
     //loop through the array
     for (let i = 0; i < arr.length - 1; i++) {
-        const loopingItem = Math.pow(arr[i], 2)
+        let loopingItem = Math.pow(arr[i], 2)
 
-        for (let j = i + 1; j < arr.length; j++) {
-            // if compareItem is less than looping Item, then swap the items
-            const compareItem = Math.pow(arr[j], 2)
-            if (compareItem < loopingItem) {
-                let current = compareItem
-                compareItem = loopingItem
-                loopingItem = current
-            }
-        }
+        // for (let j = i + 1; j < arr.length; j++) {
+        //     // if compareItem is less than looping Item, then swap the items
+        //     let compareItem = Math.pow(arr[j], 2)
+        //     if (compareItem < loopingItem) {
+        //         const current = compareItem
+        //         compareItem = loopingItem
+        //         loopingItem = current
+        //     }
+        // }
 
-        return updatedArr
     }
+    return arr
 }
 
 console.log(squareArrAndSort(arr1))
