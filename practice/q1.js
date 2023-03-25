@@ -8,23 +8,21 @@ const givenArr = [13, 34, 2, 0, 5, 9, 1, 5]
 //     })
 //     .sort((a, b) => a - b)
 
-const arr1 = [5,3,-1,4,2,0]
+const arr1 = [5, 3, -1, 4, 2, 0]
 const squareArrAndSort = (arr) => {
     const updatedArr = [...arr]
     for (let i = 0; i < arr.length - 1; i++) {
         //if the arr is empty push the first number
-        const item = arr[i]
+        const loopingItem = arr[i]
         // const square = Math.pow(item, 2)
 
         // updatedArr.push(square)
 
         for (let j = i + 1; j < updatedArr.length; j++) {
-            
+            const compareItem = updatedArr[j]
+            if(compareItem < )
         }
     }
-
-
 }
 
 console.log(squareArrAndSort(givenArr))
-
