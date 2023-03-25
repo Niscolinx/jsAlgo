@@ -29,10 +29,16 @@ const squareArrAndSort = (arr) => {
     if (arr.length < 1) {
         return arr
     }
-    //loop through the updatedArr from the end
+    
+    //Sort the arr
+    for(let item of arr){
+            
+    }
+    
     //Make two pointers, one pointer to the first item and the other pointing to the last item of the  arr
     let leftIdx = 0
     let rightIdx = arr.length - 1
+
 
     for (let i = updatedArr.length - 1; i >= 0; i--) {
         //compare the square of the numbers
