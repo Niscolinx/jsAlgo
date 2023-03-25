@@ -35,6 +35,7 @@ const squareArrAndSort = (arr) => {
     let rightIdx = arr.length - 1
 
     for (let i = updatedArr.length - 1; i > 0; i--) {
+
         //compare the square of the numbers
         //If the right value is greater, assign the value at the right index to the updated array
         //move the right idx down by removing one
