@@ -31,10 +31,11 @@ const squareArrAndSort = (arr) => {
     }
     
     //Sort the arr
-    let lowest = -Infinity
+    let lowest = Infinity
     for(let item of arr){
 
-        if(item < lowest){
+
+        if( lowest > item){
             lowest = item
 
         }
