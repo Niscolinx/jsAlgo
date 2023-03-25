@@ -9,16 +9,16 @@ const givenArr = [13, 34, 2, 0, 5, 9, 1, 5]
 //     .sort((a, b) => a - b)
 
 const squareArrAndSort = (arr) => {
-    const updatedArr = [...arr]
-    const sortedArr = []
+    const updatedArr = [...arr].sort()
     for (let i = 0; i < arr.length; i++) {
         //if the arr is empty push the first number
         const item = arr[i]
         const square = Math.pow(item, 2)
 
         updatedArr.push(square)
+
         for (let j = 0; j < updatedArr.length; j++) {
-    
+            
         }
     }
 
