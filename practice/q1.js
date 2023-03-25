@@ -10,22 +10,21 @@ const givenArr = [13, 34, 2, 0, 5, 9, 1, 5]
 
 const arr1 = [5, 3, -1, 4, 2, 0]
 const squareArrAndSort = (arr) => {
-    const updatedArr = [...arr]
+    //loop through the array
     for (let i = 0; i < arr.length - 1; i++) {
-        //if the arr is empty push the first number
-        const loopingItem = Math.power(arr[i], 2)
+        const loopingItem = Math.pow(arr[i], 2)
 
-        console.log({ loopingItem })
-        // const square = Math.pow(item, 2)
-
-        // updatedArr.push(square)
-
-        for (let j = i + 1; j < updatedArr.length; j++) {
+        for (let j = i + 1; j < arr.length; j++) {
             // if compareItem is less than looping Item, then swap the items
-            const compareItem = Math.pow(updatedArr[j], 2)
+            const compareItem = Math.pow(arr[j], 2)
             if (compareItem < loopingItem) {
+                let current = compareItem
+                compareItem = loopingItem
+                loopingItem = current
             }
         }
+
+        return updatedArr
     }
 }
 
