@@ -8,15 +8,16 @@ const givenArr = [13, 34, 2, 0, 5, 9, 1, 5]
 //     })
 //     .sort((a, b) => a - b)
 
+
 const squareArrAndSort = (arr) => {
     const updatedArr = []
+
 
     for (let i = 0; i < arr.length; i++) {
         //if the arr is empty push the first number
         const item = arr[i]
         const square = Math.pow(item, 2)
 
-        debugger
         if (updatedArr.length < 1) {
             updatedArr.push(square)
         }
@@ -25,7 +26,7 @@ const squareArrAndSort = (arr) => {
             //If it's greater then, then swap
             const temp = updatedArr[i - 1]
             updatedArr[i - 1] = square
-            updatedArr.push(square)
+            updatedArr.push(temp)
         } else {
             updatedArr.push(square)
         }
