@@ -16,9 +16,9 @@ const squareArrAndSort = (arr) => {
 
         for (let j = i + 1; j < arr.length; j++) {
             // if compareItem is less than looping Item, then swap the items
-            Math.pow(arr[j], 2)
-            if (compareItem < loopingItem) {
-                const current = compareItem
+            
+            if (Math.pow(arr[j], 2) < Math.pow(arr[i], 2)) {
+                const current = Math.pow(arr[j], 2)
                 compareItem = loopingItem
                 loopingItem = current
             }
