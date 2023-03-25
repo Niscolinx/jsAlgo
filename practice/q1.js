@@ -35,16 +35,20 @@ const squareArrAndSort = (arr) => {
     let rightIdx = arr.length - 1
 
     for (let i = updatedArr.length - 1; i > 0; i--) {
-        
-        //compare the 
-        if (Math.pow(arr[leftIdx]) < Math.pow(arr[rightIdx])){
-            updatedArr[i] = Math.pow(arr[idx])
+        //compare the square of the numbers
+        //If the right value is greater, assign the value at the right index to the updated array
+        //move the right idx down by removing one
+        if (Math.pow(arr[leftIdx]) < Math.pow(arr[rightIdx])) {
+            updatedArr[i] = Math.pow(arr[rightIdx])
             rightIdx = rightIdx - 1
         }
-        else{
-
+        //else assign the value at the left index to the updated array
+        // move the left idx up by adding 1
+        else {
+            updatedArr[i] = Math.pow(arr[leftIdx])
+            leftIdx = leftIdx + 1
         }
-            updatedArr[i] = greatest
+        updatedArr[i] = greatest
     }
 }
 
