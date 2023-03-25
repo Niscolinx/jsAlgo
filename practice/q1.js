@@ -17,11 +17,13 @@ const squareArrAndSort = (arr) => {
         const square = Math.pow(item, 2)
 
         updatedArr.push(square)
+        for (let j = 0; j < updatedArr.length; j++) {
+    
+        }
     }
 
-    for (let i = 0; i < updatedArr.length; i++) {
 
-    }
 }
 
 console.log(squareArrAndSort(givenArr))
+
