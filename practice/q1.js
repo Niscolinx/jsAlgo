@@ -10,7 +10,7 @@ const givenArr = [13, 34, 2, 0, 5, 9, 1, 5]
 
 const squareArrAndSort = (arr) => {
     const updatedArr = [...arr]
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length - 1; i++) {
         //if the arr is empty push the first number
         const item = arr[i]
         // const square = Math.pow(item, 2)
