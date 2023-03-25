@@ -38,15 +38,14 @@ const squareArrAndSort = (arr) => {
         //compare the square of the numbers
         //If the right value is greater, assign the value at the right index to the updated array
         //move the right idx down by removing one
-        if (Math.pow(arr[leftIdx]) < Math.pow(arr[rightIdx])) {
-            updatedArr[i] = Math.pow(arr[rightIdx])
+        if (Math.pow(arr[leftIdx], 2) < Math.pow(arr[rightIdx], 2)) {
+            updatedArr[i] = Math.pow(arr[rightIdx], 2)
             rightIdx = rightIdx - 1
         }
         //else assign the value at the left index to the updated array
         // move the left idx up by adding 1
         else {
-            console.log(arr[leftIdx], Math.pow(arr[leftIdx]))
-            updatedArr[i] = Math.pow(arr[leftIdx])
+            updatedArr[i] = Math.pow(arr[leftIdx], 2)
             leftIdx = leftIdx + 1
         }
     }
