@@ -38,10 +38,11 @@ const squareArrAndSort = (arr) => {
         //compare between the two pointers and move the greater one to the end of the updated arr
 
         if (Math.pow(arr[leftIdx]) < Math.pow(arr[rightIdx])){
-
+            updatedArr[i] = Math.pow(arr[idx])
+            rightIdx = rightIdx - 1
         }
         else{
-            
+
         }
             updatedArr[i] = greatest
     }
