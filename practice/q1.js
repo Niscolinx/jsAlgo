@@ -11,12 +11,13 @@ const givenArr = [13, 34, 2, 0, 5, 9, 1, 5]
 const arr1 = [5, 3, -1, 4, 2, 0]
 const squareArrAndSort = (arr) => {
     for (let i = 0; i < arr.length - 1; i++) {
-        let loopingItem = Math.pow(arr[i], 2)
-        for (let j = i + 1; j < arr.length; j++) {
-            if (Math.pow(arr[j], 2) < loopingItem) {
-                const current = Math.pow(arr[j], 2)
 
-                arr[j] = loopingItem
+         
+        for (let j = i + 1; j < arr.length; j++) {
+            if (Math.abs(arr[j], 2) < Math.abs(arr[i], 2)) {
+                const current = Math.abs(arr[j], 2)
+
+                arr[j] = Math.abs(arr[i], 2)
                 arr[i] = current
             }
         }
