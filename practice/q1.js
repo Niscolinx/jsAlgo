@@ -19,8 +19,9 @@ const squareArrAndSort = (arr) => {
             
             if (Math.pow(arr[j], 2) < Math.pow(arr[i], 2)) {
                 const current = Math.pow(arr[j], 2)
-                compareItem = loopingItem
-                loopingItem = current
+               
+                arr[j] = Math.pow(arr[i], 2)
+                arr[i] = current
             }
         }
     }
