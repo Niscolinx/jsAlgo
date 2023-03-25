@@ -14,7 +14,6 @@ const squareArrAndSort = (arr) => {
         for (let j = i + 1; j < arr.length; j++) {
             if (Math.abs(arr[j], 2) < Math.abs(arr[i], 2)) {
                 const current = Math.abs(arr[j], 2)
-
                 arr[j] = Math.abs(arr[i], 2)
                 arr[i] = current
             }
