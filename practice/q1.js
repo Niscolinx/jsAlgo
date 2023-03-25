@@ -28,6 +28,7 @@
 //     return arr
 // }
 const givenArr = [3, 5, 2, 0, 3, 2, 7]
+[2,3,5] === [2,3,7]
 
 const squareArrAndSort = (arr) => {
     const updatedArr = [...arr]
