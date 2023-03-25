@@ -28,9 +28,13 @@ const squareArrAndSort = (arr) => {
 
     const updatedArr = [...arr]
 
+    if(arr.length < 1){
+        return arr
+    }
     //loop through the arr 
     for(let i =0; i < arr.length; i++){
-        
+
+        //Make two pointers, one pointer to the first item and the other pointing to the last item
     }
 
 }
