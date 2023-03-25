@@ -13,8 +13,9 @@ const squareArrAndSort = (arr) => {
     for (let i = 0; i < arr.length - 1; i++) {
         let loopingItem = Math.pow(arr[i], 2)
         for (let j = i + 1; j < arr.length; j++) {
-            const current = Math.pow(arr[j], 2)
-            if (current < loopingItem) {
+            if (Math.pow(arr[j], 2) < loopingItem) {
+                const current = Math.pow(arr[j], 2)
+
                 arr[j] = loopingItem
                 arr[i] = current
             }
