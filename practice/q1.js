@@ -29,7 +29,7 @@ const squareArrAndSort = (arr) => {
     if (arr.length < 1) {
         return arr
     }
-    //loop through the updatedArr
+    //loop through the updatedArr from the end
     //Make two pointers, one pointer to the first item and the other pointing to the last item of the  arr
     let leftPointer = arr[0]
     let rightPointer = arr[arr.length - 1]
@@ -39,7 +39,7 @@ const squareArrAndSort = (arr) => {
 
         const greatest = Math.max(Math.abs(leftPointer), Math.abs(rightPointer))
 
-        updatedArr[updatedArr.length - 1] = greatest
+        updatedArr[i] = greatest
 
     }
 }
