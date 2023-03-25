@@ -13,7 +13,7 @@ const squareArrAndSort = (arr) => {
     const updatedArr = [...arr]
     for (let i = 0; i < arr.length - 1; i++) {
         //if the arr is empty push the first number
-        const loopingItem = parseInt(arr[i])
+        const loopingItem = Math.abs(arr[i])
 
         console.log({loopingItem})
         // const square = Math.pow(item, 2)
@@ -30,4 +30,4 @@ const squareArrAndSort = (arr) => {
     }
 }
 
-console.log(squareArrAndSort(givenArr))
+console.log(squareArrAndSort(arr1))
