@@ -31,8 +31,12 @@ const squareArrAndSort = (arr) => {
     }
     
     //Sort the arr
+    let lowest = -Infinity
     for(let item of arr){
+
+        if(item > lowest){
             
+        }
     }
     
     //Make two pointers, one pointer to the first item and the other pointing to the last item of the  arr
