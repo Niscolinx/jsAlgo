@@ -7,7 +7,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/practice/q1.js",
+            "program": "${workspaceFolder}/practice/**.js",
             //"program":   "${workspaceFolder}/**/*.js",
             "cwd": "${workspaceFolder}",
             "skipFiles": [

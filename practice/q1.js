@@ -3,7 +3,7 @@
 
 
 
-//const givenArr = [3, -5, 2, 0, 3, 2, 7]
+const givenArr = [3, -5, 2, 0, 3, 2, 7]
 //const givenArr = [-4, -2, 0, 1, 3]
 
 //First solution
@@ -27,18 +27,7 @@
 //     }
 //     return arr
 // }
-const givenArr =
-    [9, 2, 5, 0, 1, 6, 3, 2, 7, 1, 8]
-    
-    [9, 2, 5, 0, 1] == [6, 3, 2, 7, 1, 8]
-           ||
-        [9,2,5] == [0, 1]    
-           ||
-           [9,2] == [5] 
-                ||
-           [2,9] == [5]
-               ||
-               [2, 5,9] 
+           
 
 const squareArrAndSort = (arr) => {
     const updatedArr = [...arr]
@@ -46,9 +35,11 @@ const squareArrAndSort = (arr) => {
     
     //Sort the arr
     const sortArr = (arr) => {
-
+        arr.sort()
 
     }
+
+    sortArr(updatedArr)
     
     //Make two pointers, one pointer to the first item and the other pointing to the last item of the  arr
     let leftIdx = 0
