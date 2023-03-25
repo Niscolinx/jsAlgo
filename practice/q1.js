@@ -34,12 +34,12 @@ const squareArrAndSort = (arr) => {
     let leftPointer = arr[0]
     let rightPointer = arr[arr.length - 1]
 
-    for (let i = 0; i < updatedArr.length; i++) {
+    for (let i = updatedArr.length - 1; i > 0; i--) {
         //compare between the two pointers and move the greater one to the end of the updated arr
 
         const greatest = Math.max(Math.abs(leftPointer), Math.abs(rightPointer))
 
-        
+        updatedArr[updatedArr.length - 1] = greatest
 
     }
 }
