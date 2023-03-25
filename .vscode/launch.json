@@ -11,6 +11,8 @@
             // "outFiles": [
             // "${workspaceFolder}/src/**/*.js"
             //  ],
+                    "program": "${workspaceFolder}/practice/q2.js",
+
              "sourceMaps": true,
             "cwd": "${workspaceFolder}",
             "skipFiles": [
