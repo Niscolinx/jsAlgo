@@ -24,9 +24,15 @@ const givenArr = [5, 3, -1, 4, 2, 0]
 // }
 
 
-const squareArrAndSort = () => {
+const squareArrAndSort = (arr) => {
 
-    
+    const updatedArr = [...arr]
+
+    //loop through the arr 
+    for(let i =0; i < arr.length; i++){
+        
+    }
+
 }
 
 console.log(squareArrAndSort(givenArr))
