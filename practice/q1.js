@@ -13,20 +13,19 @@ const squareArrAndSort = (arr) => {
     const updatedArr = [...arr]
     for (let i = 0; i < arr.length - 1; i++) {
         //if the arr is empty push the first number
-        const loopingItem = Math.abs(arr[i])
+        const loopingItem = Math.power(arr[i], 2)
 
-        console.log({loopingItem})
+        console.log({ loopingItem })
         // const square = Math.pow(item, 2)
 
         // updatedArr.push(square)
 
-        // for (let j = i + 1; j < updatedArr.length; j++) {
-        //     // if compareItem is less than looping Item, then swap the items
-        //     const compareItem = updatedArr[j]
-        //     if(compareItem < loopingItem){
-
-        //     }
-        // }
+        for (let j = i + 1; j < updatedArr.length; j++) {
+            // if compareItem is less than looping Item, then swap the items
+            const compareItem = Math.pow(updatedArr[j], 2)
+            if (compareItem < loopingItem) {
+            }
+        }
     }
 }
 
