@@ -19,8 +19,11 @@ const squareArrAndSort = (arr) => {
         // updatedArr.push(square)
 
         for (let j = i + 1; j < updatedArr.length; j++) {
+            // if compareItem is less than looping Item, then swap the items
             const compareItem = updatedArr[j]
-            if(compareItem < )
+            if(compareItem < loopingItem){
+                
+            }
         }
     }
 }
