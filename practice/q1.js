@@ -10,7 +10,7 @@ const givenArr = [13, 34, 2, 0, 5, 9, 1, 5]
 
 const squareArrAndSort = (arr) => {
     const updatedArr = []
-
+    const sortedArr = []
     for (let i = 0; i < arr.length; i++) {
         //if the arr is empty push the first number
         const item = arr[i]
@@ -18,6 +18,8 @@ const squareArrAndSort = (arr) => {
 
         updatedArr.push(square)
     }
+
+    
 
     return updatedArr
 }
