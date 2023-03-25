@@ -23,23 +23,18 @@ const givenArr = [5, 3, -1, 4, 2, 0]
 //     return arr
 // }
 
-
 const squareArrAndSort = (arr) => {
-
     const updatedArr = [...arr]
 
-    if(arr.length < 1){
+    if (arr.length < 1) {
         return arr
     }
-    //loop through the arr 
-    for(let i =0; i < arr.length; i++){
+    //loop through the arr
+    //Make two pointers, one pointer to the first item and the other pointing to the last item of the  arr
+    let leftPointer = arr[0]
+    let rightPointer = arr[arr.length - 1]
 
-        //Make two pointers, one pointer to the first item and the other pointing to the last item of the  arr
-
-        let leftPointer = arr[0]
-        let rightPointer = arr[arr.length - 1]
-    }
-
+    for (let i = 0; i < arr.length; i++) {}
 }
 
 console.log(squareArrAndSort(givenArr))
