@@ -10,17 +10,12 @@ const givenArr = [13, 34, 2, 0, 5, 9, 1, 5]
 
 const arr1 = [5, 3, -1, 4, 2, 0]
 const squareArrAndSort = (arr) => {
-    //loop through the array
     for (let i = 0; i < arr.length - 1; i++) {
-         Math.pow(arr[i], 2)
-
+        let loopingItem = Math.pow(arr[i], 2)
         for (let j = i + 1; j < arr.length; j++) {
-            // if compareItem is less than looping Item, then swap the items
-            
-            if (Math.pow(arr[j], 2) < Math.pow(arr[i], 2)) {
-                const current = Math.pow(arr[j], 2)
-               
-                arr[j] = Math.pow(arr[i], 2)
+            const current = Math.pow(arr[j], 2)
+            if (current < loopingItem) {
+                arr[j] = loopingItem
                 arr[i] = current
             }
         }
