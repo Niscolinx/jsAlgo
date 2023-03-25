@@ -45,6 +45,7 @@ const squareArrAndSort = (arr) => {
         //else assign the value at the left index to the updated array
         // move the left idx up by adding 1
         else {
+            console.log(arr[leftIdx], Math.pow(arr[leftIdx]))
             updatedArr[i] = Math.pow(arr[leftIdx])
             leftIdx = leftIdx + 1
         }
