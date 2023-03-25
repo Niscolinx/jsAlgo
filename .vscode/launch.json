@@ -7,8 +7,11 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/practice/**.js",
-            //"program":   "${workspaceFolder}/**/*.js",
+            // "program": "${workspaceFolder}/practice/*.js",
+            // "outFiles": [
+            // "${workspaceFolder}/src/**/*.js"
+            //  ],
+             "sourceMaps": true,
             "cwd": "${workspaceFolder}",
             "skipFiles": [
                 "<node_internals>/**"
