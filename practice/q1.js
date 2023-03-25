@@ -35,8 +35,8 @@ const squareArrAndSort = (arr) => {
     let rightIdx = arr.length - 1
 
     for (let i = updatedArr.length - 1; i > 0; i--) {
-        //compare between the two pointers and move the greater one to the end of the updated arr
-
+        
+        //compare the 
         if (Math.pow(arr[leftIdx]) < Math.pow(arr[rightIdx])){
             updatedArr[i] = Math.pow(arr[idx])
             rightIdx = rightIdx - 1
