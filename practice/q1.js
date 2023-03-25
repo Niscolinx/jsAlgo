@@ -1,5 +1,5 @@
-// const givenArr = [3, 5, 7, 8, 9, 9, 12, 17]
-const givenArr = [-4, -2, 0, 1, 3]
+const givenArr = [3, 5, 7, 8, 9, 9, 12, 17]
+//const givenArr = [-4, -2, 0, 1, 3]
 
 //First solution
 // const updatedArr = givenArr
@@ -34,7 +34,7 @@ const squareArrAndSort = (arr) => {
     let leftIdx = 0
     let rightIdx = arr.length - 1
 
-    for (let i = updatedArr.length - 1; i > 0; i--) {
+    for (let i = updatedArr.length - 1; i >= 0; i--) {
 
         //compare the square of the numbers
         //If the right value is greater, assign the value at the right index to the updated array
