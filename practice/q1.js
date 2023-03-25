@@ -16,7 +16,6 @@ const squareArrAndSort = (arr) => {
         const item = arr[i]
         const square = Math.pow(item, 2)
 
-        
         updatedArr.push(square)
     }
 
