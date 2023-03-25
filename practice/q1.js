@@ -38,7 +38,7 @@ const givenArr =
                 ||
            [2,9] == [5]
                ||
-               [2, ] 
+               [2, 5,9] 
 
 const squareArrAndSort = (arr) => {
     const updatedArr = [...arr]
