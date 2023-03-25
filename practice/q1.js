@@ -1,5 +1,5 @@
 // const givenArr = [3, 5, 7, 8, 9, 9, 12, 17]
-const givenArr = [5, 3, -1, 4, 2, 0]
+const givenArr = [-4, -2, 0, 1, 3]
 
 //First solution
 // const updatedArr = givenArr
@@ -48,8 +48,9 @@ const squareArrAndSort = (arr) => {
             updatedArr[i] = Math.pow(arr[leftIdx])
             leftIdx = leftIdx + 1
         }
-        updatedArr[i] = greatest
     }
+
+    return updatedArr
 }
 
 console.log(squareArrAndSort(givenArr))
