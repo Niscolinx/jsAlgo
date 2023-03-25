@@ -1,3 +1,6 @@
+//Question
+// You have given an array of integers in which each subsequent value is not less than the previous value. Write a function that takes the array as an input, and returns the square of each number sorted in ascending order
+
 const givenArr = [3, -5, 2, 0, 3, 2, 7]
 //const givenArr = [-4, -2, 0, 1, 3]
 
@@ -26,9 +29,6 @@ const givenArr = [3, -5, 2, 0, 3, 2, 7]
 const squareArrAndSort = (arr) => {
     const updatedArr = [...arr]
 
-    if (arr.length < 1) {
-        return arr
-    }
     
     //Sort the arr
     let lowest = Infinity
