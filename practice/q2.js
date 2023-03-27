@@ -15,20 +15,18 @@ const isMonotonic = (arr) => {
                 return false
             }
 
-            return true
         }
+        return true
     } else {
-        console.log("run")
-        let temp = false
         for (let i = 0; i < arr.length; i++) {
-            console.log({arr}, arr[i + 1], arr[i])
             if (arr[i + 1] > arr[i]) {
-                console.log("false")
                 return false
             }
-
     
         }
+
+
+        return true
     }
     
 }
@@ -38,7 +36,7 @@ const isMonotonic = (arr) => {
  //const givenArr = [2,0,0,1,1]
 //const givenArr = [1,5,5,6,8,12,3,0]
 // const givenArr = [1,5,5,6,8,12]
- const givenArr = [7,6,5,1,3,0]
-// const givenArr = [7,6,5,2,1]
+ //const givenArr = [7,6,5,1,3,0]
+ const givenArr = [7,6,5,2,1]
 
 console.log(isMonotonic(givenArr))
