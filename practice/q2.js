@@ -10,7 +10,9 @@ const isMonotonic = (arr) => {
     if (isIncreasingOrEqual) {
         //Loop through and check if all the items are increasing or equal
 
-        for (let i = 0; i < arr.length; i++) {}
+        for (let i = 0; i < arr.length; i++) {
+            
+        }
     } else {
     }
 
