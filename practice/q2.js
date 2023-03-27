@@ -20,7 +20,9 @@ const isMonotonic = (arr) => {
     } else {
         console.log("run")
         for (let i = 0; i < arr.length; i++) {
+            console.log({arr}, arr[i + 1], arr[i])
             if (arr[i + 1] > arr[i]) {
+                console.log("false")
                 return false
             }
 
