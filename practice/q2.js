@@ -25,8 +25,8 @@ const isMonotonic = (arr) => {
     }
 }
 
-//const givenArr = [2,2,2,2,2]
-const givenArr = [2,1,0,5,2]
+const givenArr = [2,2,2,2,2]
+//const givenArr = [2,1,0,5,2]
 //const givenArr = [2,0,0,1,1]
 //const givenArr = [1,5,5,6,8,12,3,0]
  //const givenArr = [1,5,5,6,8,12]
