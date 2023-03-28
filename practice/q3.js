@@ -56,9 +56,9 @@ const rotateTheArray = (arr, k) => {
 
     }
 
-    return (arr) => {
+    return () => {
 
-
+        
 
     }
 
