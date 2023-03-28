@@ -28,7 +28,11 @@ const rotateArr = (arr, k) => {
     const remaining_sliced = arr.slice(0, arr.length - k)
 
     //spread into the rotatedArr
-    rotatedArr = [...k_sliced, ...remaining_sliced]
+   rotatedArr = [...k_sliced, ...remaining_sliced]
+
+   //rotatedArr = [k_sliced, remaining_sliced]
+
+   //rotatedArr = k_sliced.concat(remaining_sliced)
 
     return rotatedArr
 }
