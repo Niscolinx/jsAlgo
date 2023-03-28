@@ -15,6 +15,7 @@ const rotateArr = (arr, k) => {
 
     if(arr.length < 1) return []
     if(k === 0) return arr
+    if(k > arr.length) return arr
 
 
     //should return [4,3,2,1] for k = 1
@@ -22,6 +23,6 @@ const rotateArr = (arr, k) => {
 
     //create another array to hold the updated values
 
-    
+
 
 }
