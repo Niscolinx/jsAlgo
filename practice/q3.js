@@ -37,4 +37,13 @@ const rotateArr = (arr, k) => {
     return rotatedArr
 }
 
-console.log(rotateArr(givenArr, 7))
+
+//console.log(rotateArr(givenArr, 7))
+
+//Solution 2
+
+const rotateTheArray = (arr) => {
+
+    
+}
+
