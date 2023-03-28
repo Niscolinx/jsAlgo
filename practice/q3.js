@@ -44,6 +44,7 @@ const rotateArr = (arr, k) => {
 
 const rotateTheArray = (arr, k) => {
 
+    k = k % arr.length
 
     const reverse = (numsArr, start, end,) =>{
         while(start < end){
@@ -57,10 +58,9 @@ const rotateTheArray = (arr, k) => {
     }
 
 
-        const reversedArr = reverse(arr, 0, arr.length - 1) 
-        
-        return reversedArr
+        const reversedArr = reverse(arr, 0, arr.length - 1)  
 
+        const firstPart = reverse(reversedArr, 0, )
 
 }
 
