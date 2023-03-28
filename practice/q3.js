@@ -16,16 +16,11 @@ const rotateArr = (arr, k) => {
         k = k % arr.length
     }
 
-    //should return [4,3,2,1] for k = 1
-    //should return [3,4,1,2] for k = 2
-
-    //create another array to hold the updated values
     let rotatedArr = []
 
     //slice through k steps, starting from the end
-
-    const k_sliced = arr.slice(-k)
-    const remaining_sliced = arr.slice(0, arr.length - k)
+    const k_sliced = arr.splice(-k)
+    const remaining_sliced = arr.splice(0, arr.length - k)
 
     //spread into the rotatedArr
     rotatedArr = [...k_sliced, ...remaining_sliced]
@@ -37,16 +32,21 @@ const rotateArr = (arr, k) => {
     return rotatedArr
 }
 
-//console.log(rotateArr(givenArr, 7))
+console.log(rotateArr(givenArr, 7))
 
 //Solution 2
 
 const rotateTheArray = (arr, k) => {
-    k = k % arr.length
+    if (arr.length < 1) return []
+    if (k === 0) return arr
+    if (k > arr.length) {
+        k = k % arr.length
+    }
 
+    //loop through the array and reverse using es6 syntax
     const reverse = (numsArr, start, end) => {
         while (start < end) {
-            [numsArr[start], numsArr[end]] = [numsArr[end], numsArr[start]]
+            ;[numsArr[start], numsArr[end]] = [numsArr[end], numsArr[start]]
             start++
             end--
         }
@@ -62,4 +62,4 @@ const rotateTheArray = (arr, k) => {
     return arr
 }
 
-console.log(rotateTheArray(givenArr, 6))
+//console.log(rotateTheArray(givenArr, 6))
