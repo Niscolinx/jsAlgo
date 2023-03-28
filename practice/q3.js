@@ -42,7 +42,7 @@ const rotateArr = (arr, k) => {
 
 //Solution 2
 
-const rotateTheArray = (arr) => {
+const rotateTheArray = (arr, k) => {
 
 
     const reverse = (numsArr, start, end,) =>{
@@ -56,8 +56,12 @@ const rotateTheArray = (arr) => {
 
     }
 
+    return (arr) => {
 
-    
+
+
+    }
+
 
 }
 
