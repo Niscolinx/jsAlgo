@@ -4,3 +4,14 @@
 //Constraints 
 //1. if arr = [] return []
 //2. if k = 0, no rotation
+
+
+//Solution
+
+const givenArr = [1,2,3,4]
+
+
+const rotateArr = (arr, k) => {
+
+    
+}
