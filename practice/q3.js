@@ -28,42 +28,38 @@ const rotateArr = (arr, k) => {
     const remaining_sliced = arr.slice(0, arr.length - k)
 
     //spread into the rotatedArr
-   rotatedArr = [...k_sliced, ...remaining_sliced]
+    rotatedArr = [...k_sliced, ...remaining_sliced]
 
-   //rotatedArr = [k_sliced, remaining_sliced]
+    //rotatedArr = [k_sliced, remaining_sliced]
 
-   //rotatedArr = k_sliced.concat(remaining_sliced)
+    //rotatedArr = k_sliced.concat(remaining_sliced)
 
     return rotatedArr
 }
-
 
 //console.log(rotateArr(givenArr, 7))
 
 //Solution 2
 
 const rotateTheArray = (arr, k) => {
-
     k = k % arr.length
 
-    const reverse = (numsArr, start, end,) =>{
-        while(start < end){
-            [numsArr[start], numsArr[end]] = [numsArr[end], numsArr[start]]
+    const reverse = (numsArr, start, end) => {
+        while (start < end) {
+            ;[numsArr[start], numsArr[end]] = [numsArr[end], numsArr[start]]
             start++
             end--
-         
         }
 
         return numsArr
     }
 
+    const reversedArr = reverse(arr, 0, arr.length - 1)
 
-        const reversedArr = reverse(arr, 0, arr.length - 1)  
+    reverse(reversedArr, 0, k - 1)
+    reverse(reversedArr, k, arr.length - 1)
 
-        const firstPart = reverse(reversedArr, 0, k - 1)
-        const secondPart = reverse(reversedArr, k, arr.length - 1)
-
+    return arr
 }
 
-console.log(rotateTheArray(givenArr, 3))
-
+console.log(rotateTheArray(givenArr, 6))
