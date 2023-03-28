@@ -22,11 +22,17 @@ const rotateArr = (arr, k) => {
     //should return [3,4,1,2] for k = 2
 
     //create another array to hold the updated values
-    const rotatedArr = []
+    let rotatedArr = []
 
     //slice through k steps, starting from the end
 
      const k_sliced = arr.slice(arr.length - 1, k)
      const remaining_sliced = arr.slice(0, arr.length - k)
 
+    rotatedArr = [...k_sliced, ...remaining_sliced]
+
+    return rotatedArr
+
 }
+
+console.log(rotateArr(givenArr))
