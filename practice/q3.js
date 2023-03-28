@@ -22,10 +22,9 @@ const rotateArr = (arr, k) => {
 
     //slice through k steps, starting from the end
 
-    const k_sliced = arr.slice(arr.length - 1, k)
+    const k_sliced = arr.slice(-k)
     const remaining_sliced = arr.slice(0, arr.length - k)
 
-    console.log({k_sliced, remaining_sliced})
 
     //spread into the rotatedArr
     rotatedArr = [...k_sliced, ...remaining_sliced]
