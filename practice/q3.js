@@ -7,12 +7,14 @@
 
 //Solution
 
-const givenArr = [1, 2, 3, 4,5]
+const givenArr = [1, 2, 3, 4, 5]
 
 const rotateArr = (arr, k) => {
     if (arr.length < 1) return []
     if (k === 0) return arr
-   // if (k > arr.length) return arr
+    if (k > arr.length) {
+        k = k % arr.length
+    }
 
     //should return [4,3,2,1] for k = 1
     //should return [3,4,1,2] for k = 2
@@ -25,11 +27,10 @@ const rotateArr = (arr, k) => {
     const k_sliced = arr.slice(-k)
     const remaining_sliced = arr.slice(0, arr.length - k)
 
-
     //spread into the rotatedArr
     rotatedArr = [...k_sliced, ...remaining_sliced]
 
     return rotatedArr
 }
 
-console.log(rotateArr(givenArr, 4))
+console.log(rotateArr(givenArr, 7))
