@@ -54,12 +54,14 @@ const rotateTheArray = (arr, k) => {
             
         }
 
+        return numsArr
     }
 
     return () => {
 
+        const reversedArr = reverse(arr, 0, arr.length - 1) 
         
-
+        
     }
 
 
