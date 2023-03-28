@@ -7,12 +7,12 @@
 
 //Solution
 
-const givenArr = [1, 2, 3, 4]
+const givenArr = [1, 2, 3, 4,5]
 
 const rotateArr = (arr, k) => {
     if (arr.length < 1) return []
     if (k === 0) return arr
-    if (k > arr.length) return arr
+   // if (k > arr.length) return arr
 
     //should return [4,3,2,1] for k = 1
     //should return [3,4,1,2] for k = 2
@@ -32,4 +32,4 @@ const rotateArr = (arr, k) => {
     return rotatedArr
 }
 
-console.log(rotateArr(givenArr, 1))
+console.log(rotateArr(givenArr, 4))
