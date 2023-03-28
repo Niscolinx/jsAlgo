@@ -17,6 +17,9 @@ const rotateArr = (arr, k) => {
     if(k === 0) return arr
 
 
+    //should return [4,3,2,1] for k = 1
+    //should return [3,4,1,2] for k = 2
+
     
 
 }
