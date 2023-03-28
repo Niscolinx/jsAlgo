@@ -13,5 +13,10 @@ const givenArr = [1,2,3,4]
 
 const rotateArr = (arr, k) => {
 
+    if(arr.length < 1) return []
+    if(k === 0) return arr
+
+
     
+
 }
