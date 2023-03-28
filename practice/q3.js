@@ -46,7 +46,7 @@ const rotateTheArray = (arr, k) => {
 
     const reverse = (numsArr, start, end) => {
         while (start < end) {
-            ;[numsArr[start], numsArr[end]] = [numsArr[end], numsArr[start]]
+            [numsArr[start], numsArr[end]] = [numsArr[end], numsArr[start]]
             start++
             end--
         }
