@@ -17,18 +17,18 @@ const rotateArr = (arr, k) => {
     }
 
     //slice through k steps, starting from the end
-    const k_sliced = arr.splice(-k,1)
-
-    console.log({k_sliced})
-    const remaining_sliced = arr.slice(0, arr.length - k)
+    // const k_sliced = arr.splice(-k,1)
+    // const remaining_sliced = arr.slice(0, arr.length - k)
 
     //spread into the rotatedArr
-    arr = [...k_sliced, ...remaining_sliced]
-
+    //option1
+    // arr = [...k_sliced, ...remaining_sliced]
+    //option2
     //rotatedArr = [k_sliced, remaining_sliced].flat(1)
-
+    //option3
     //rotatedArr = k_sliced.concat(remaining_sliced)
 
+    
     return arr
 }
 
