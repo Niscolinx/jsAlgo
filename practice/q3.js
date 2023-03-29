@@ -29,12 +29,14 @@ const rotateArr = (arr, k) => {
     //rotatedArr = k_sliced.concat(remaining_sliced)
 
 
-    const k_sliced = arr.splice(-1, 2)
+    const k_sliced = arr.splice(arr.length - k, k)
+
+    arr = k_sliced.concat(arr)
 
     return arr
 }
 
-console.log(rotateArr(givenArr, 7))
+console.log(rotateArr(givenArr, 1))
 
 //Solution 2
 
