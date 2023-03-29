@@ -28,7 +28,9 @@ const rotateArr = (arr, k) => {
     //option3
     //rotatedArr = k_sliced.concat(remaining_sliced)
 
-    
+
+    const k_sliced = arr.splice(-1, 2)
+
     return arr
 }
 
