@@ -7,15 +7,11 @@
 //y axis does not count as a wall
 //A line inside the container does not affect the area
 
-;[1, 4, 3, 5, 2]
-1, 2, 3, 4, 5, 6
+[1, 4, 3, 5, 2]
 
 
-
-;(x = 0), (y = 1)
-;(x = 1), (y = 4)
-;(x = 2), (y = 3)
-;(x = 3), (y = 5)
-;(x = 4), (y = 2)
-
-
+(x = 0), (y = 1)
+(x = 1), (y = 4)
+(x = 2), (y = 3)
+(x = 3), (y = 5)
+(x = 4), (y = 2)
