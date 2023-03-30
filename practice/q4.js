@@ -20,8 +20,14 @@
 (x = 4), (y = 2)
 
 
-function mostWaterContainer(){
-
+function mostWaterContainer(arr){
     
+    const area = (a, b) => {
+        return a * b
+    }
+    const full_breadth_idx = arr.length - 1
+
+
+
 
 }
