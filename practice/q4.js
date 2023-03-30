@@ -7,10 +7,10 @@
 //y axis does not count as a wall
 //A line inside the container does not affect the area
 
-[1, 4, 3, 5, 2]
+[1, 6, 3, 5, 2]
 
-2*3 = 6
-4*2 = 8
+2*4 = 8
+6*2 = 12
 
 
 (x = 0), (y = 1)
@@ -21,11 +21,11 @@
 
 
 function mostWaterContainer(arr){
-    
+
     const area = (a, b) => {
         return a * b
     }
-    const full_breadth_idx = arr.length - 1
+    const breadth_idx = arr.length - 1
 
 
 
