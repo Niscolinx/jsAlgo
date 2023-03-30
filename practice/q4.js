@@ -6,3 +6,6 @@
 //Constraints
 //y axis does not count as a wall
 //A line inside the container does not affect the area
+
+[0, 1, 2, 3, 4, 5]
+1, 2, 3, 4, 5, 6
