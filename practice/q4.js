@@ -7,9 +7,8 @@
 //y axis does not count as a wall
 //A line inside the container does not affect the area
 
-[1,4,3,5,7]
+;[1, 4, 3, 5, 7]
 1, 2, 3, 4, 5, 6
-
-for the first line, it should be = x= (0, 0), y= (0,1)
-for the second line, it should be = x= (1, 0), y= (1,4)
-
+;(x = 0), (y = 1)
+;(x = 1), (y = 4)
+;(x = 2), (y = 3)
