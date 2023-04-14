@@ -39,6 +39,8 @@ function mostWaterContainer(arr) {
     for(let i = 0; i < sorted.length - 1; i++) {
 
         const area = getArea(sorted[i], sorted[i + 1])
+
+        max = area > max ? area : max
     }
 
     return max
