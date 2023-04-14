@@ -35,9 +35,7 @@ function mostWaterContainer(arr) {
 
     const sorted = listValues.sort((a, b) => b[0] - a[0])
 
-
-    for(let i = 0; i < sorted.length - 1; i++) {
-
+    for (let i = 0; i < sorted.length - 1; i++) {
         const area = getArea(sorted[i], sorted[i + 1])
 
         max = area > max ? area : max
@@ -46,4 +44,5 @@ function mostWaterContainer(arr) {
     return max
 }
 
-console.log(mostWaterContainer([1, 5, 6, 3, 4]))
+// console.log(mostWaterContainer([1, 5, 6, 3, 4]))
+console.log(mostWaterContainer([10, 6, 5, 6, 5, 7]))
