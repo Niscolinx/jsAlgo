@@ -7,17 +7,17 @@
 //y axis does not count as a wall
 //A line inside the container does not affect the area
 
-[1, 6, 3, 5, 2]
 
-2*4 = 8
-6*2 = 12
+//[1,5,6,3,4]
 
-
-(x = 0), (y = 1)
-(x = 1), (y = 4)
-(x = 2), (y = 3)
-(x = 3), (y = 5)
-(x = 4), (y = 2)
+//get the last number in the list
+//{
+    6:2,
+    5:1,
+    4:4,
+    3:3,
+    1:0
+}
 
 
 function mostWaterContainer(arr){
