@@ -12,18 +12,18 @@
 
 //get the last number in the list
 //{
-//     6:2,
-//     5:1,
-//     4:4,
-//     3:3,
-//     1:0
+//     [6,2],
+//     [5,1],
+//     [4,4],
+//     [3,3],
+//     [1,0]
 // }
 
 
 function mostWaterContainer(arr){
 
-   function getArea(){
-    
+   function getArea(currArr, compareArr){
+        const compare_value =  Math.abs(currArr[1] - compareArr[1])
    }
 
 }
