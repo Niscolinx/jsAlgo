@@ -19,8 +19,19 @@
 // }
 
 function mostWaterContainer(arr) {
+    let max = 0
     function getArea(currArr, compareArr) {
-        const x_value = Math.abs(currArr[1] - compareArr[1])
-        const y_value = Math.min(currArr[0], compareArr[0])
+        const x = Math.abs(currArr[1] - compareArr[1])
+        const y = Math.min(currArr[0], compareArr[0])
+
+        return x * y
     }
+
+
+    for(let [i, key] of arr){
+        console.log({arr})
+    }
+
+
+    return max
 }
