@@ -36,9 +36,9 @@ function mostWaterContainer(arr) {
     const sorted = listValues.sort((a, b) => b[0] - a[0])
 
 
-    for(let i = 0; i < sorted.length; i++) {
+    for(let i = 0; i < sorted.length - 1; i++) {
 
-        const area = getArea(vertex)
+        const area = getArea(sorted[i], sorted[i + 1])
     }
 
     return max
