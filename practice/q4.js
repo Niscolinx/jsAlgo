@@ -7,7 +7,6 @@
 //y axis does not count as a wall
 //A line inside the container does not affect the area
 
-
 //[1,5,6,3,4]
 
 //get the last number in the list
@@ -19,11 +18,9 @@
 //     [1,0]
 // }
 
-
-function mostWaterContainer(arr){
-
-   function getArea(currArr, compareArr){
-        const compare_value =  Math.abs(currArr[1] - compareArr[1])
-   }
-
+function mostWaterContainer(arr) {
+    function getArea(currArr, compareArr) {
+        const x_value = Math.abs(currArr[1] - compareArr[1])
+        const y_value = Math.min(currArr[0], compareArr[0])
+    }
 }
