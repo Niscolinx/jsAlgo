@@ -28,10 +28,13 @@ function mostWaterContainer(arr) {
     }
 
 
-    for(let [i, key] of arr){
-        console.log({arr})
+    for(let i = 0; i < arr.length; i++){
+    
+        
     }
 
 
     return max
 }
+
+console.log(mostWaterContainer([1, 5, 6, 3, 4]))
