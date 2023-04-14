@@ -12,22 +12,18 @@
 
 //get the last number in the list
 //{
-    6:2,
-    5:1,
-    4:4,
-    3:3,
-    1:0
-}
+//     6:2,
+//     5:1,
+//     4:4,
+//     3:3,
+//     1:0
+// }
 
 
 function mostWaterContainer(arr){
 
-    const area = (a, b) => {
-        return a * b
-    }
-    const breadth_idx = arr.length - 1
-
-
-
+   function getArea(){
+    
+   }
 
 }
