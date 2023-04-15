@@ -121,12 +121,17 @@ function mostWaterContainer2(arr) {
 //console.log(mostWaterContainer([3,7,5,6,8,4]))
 console.log(mostWaterContainer1([2, 4, 1, 4, 7, 8, 5, 6]))
 
-//length to move = arr.length - 2
+//length to move = arr.length - 2 = 6
 
 //Check the min value between x, y  = 2
-//Get the difference between their indices = 6 - 0 = 6
-//Area will now be 2 * 6 = 12
+//Get the difference between their indices = 7 - 0 = 7
 //get the area, then add one from the lower value
-//1. area = 2* 6 = 12, moveCount = moveCount--
-//2. area = 4* 6 = 24, moveCount = moveCount--
-//3. area = 1*5 = 24, moveCount = moveCount--
+//1. area = 2* 7 = 12, 
+// check for the min value between left pointer and right pointer
+// Then add increment or decrement the pointer
+// 2 < 6, so 
+//2. area = 4* 6 = 24, left = left++
+//3. area = 1*5 = 5, left = left++
+//4. area = 4*4 = 16, left = left++
+//5. area = 7*3 = 21, left = left++
+//5. area = 7*3 = 21, moveCount = moveCount--
