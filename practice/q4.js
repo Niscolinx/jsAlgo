@@ -96,9 +96,25 @@ function mostWaterContainer2(arr) {
 
     //length to move = arr.length - 2 = 6
 
-    const moveLength = arr.length - 2
+    let moveLength = arr.length - 2
     let left_idx = 0,
         right_idx = arr.length - 1
+
+    while (moveLength >= 0){
+        moveLength--
+
+        
+
+    }
+
+    function getArea(arr, left_idx, right_idx){
+
+        const minValue = Math.min(arr[left_idx], arr[right_idx])
+        const diff = right_idx - left_idx
+
+        return minValue * diff
+    }
+
 
     //Check the min value between x, y  = 2
     //Get the difference between their indices = 7 - 0 = 7
