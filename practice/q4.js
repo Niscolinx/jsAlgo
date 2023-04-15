@@ -96,6 +96,10 @@ function mostWaterContainer2(arr) {
 
     //length to move = arr.length - 2 = 6
 
+    const moveLength = arr.length - 2
+    let left_idx = 0,
+        right_idx = arr.length - 1
+
     //Check the min value between x, y  = 2
     //Get the difference between their indices = 7 - 0 = 7
     //get the area, then add one from the lower value
@@ -123,7 +127,7 @@ function mostWaterContainer2(arr) {
     //5. area = 7*1 = 7,
     
 
-    return max
+   
 }
 
 //console.log(mostWaterContainer2([1, 5, 6, 3, 4]))
