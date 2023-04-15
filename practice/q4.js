@@ -92,6 +92,11 @@ function mostWaterContainer1(arr) {
 }
 
 function mostWaterContainer2(arr) {
+
+    if(arr.length < 1){
+        return 0
+    }
+    
     let max = 0
 
     let moveLength = arr.length - 2
