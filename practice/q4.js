@@ -93,7 +93,7 @@ function mostWaterContainer1(arr) {
 
 function mostWaterContainer2(arr) {
 
-    if(arr.length < 1){
+    if(arr.length <= 1){
         return 0
     }
     
