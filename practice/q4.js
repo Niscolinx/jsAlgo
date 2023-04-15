@@ -92,32 +92,30 @@ function mostWaterContainer1(arr) {
 }
 
 function mostWaterContainer2(arr) {
-    console.log(mostWaterContainer1([2, 4, 1, 4, 7, 8, 5, 6]))
-
     let max = 0
 
     let moveLength = arr.length - 2
+
     let left_idx = 0,
         right_idx = arr.length - 1
 
-    while (moveLength >= 0){
+    while (moveLength >= 0) {
         moveLength--
 
         const area = getArea(arr, left_idx, right_idx)
         max = area > max ? area : max
-        
-        arr[left_idx] <= arr[right_idx] ? left_idx++ : right_idx++
 
+        arr[left_idx] <= arr[right_idx] ? left_idx++ : right_idx++
     }
 
-    function getArea(arr, left_idx, right_idx){
-
+    function getArea(arr, left_idx, right_idx) {
         const minValue = Math.min(arr[left_idx], arr[right_idx])
         const diff = right_idx - left_idx
 
         return minValue * diff
     }
 
+    return max
 
     //Check the min value between x, y  = 2
     //Get the difference between their indices = 7 - 0 = 7
@@ -144,12 +142,9 @@ function mostWaterContainer2(arr) {
 
     // 7 > 5, so right-- , now left = 4, right = 5
     //5. area = 7*1 = 7,
-    
-
-   
 }
 
 //console.log(mostWaterContainer2([1, 5, 6, 3, 4]))
 // console.log(mostWaterContainer([10, 6, 5, 6, 5, 7]))
 //console.log(mostWaterContainer([3,7,5,6,8,4]))
-
+console.log(mostWaterContainer2([2, 4, 1, 4, 7, 8, 5, 6]))
