@@ -91,6 +91,10 @@ function mostWaterContainer2(arr) {
     for (let i = 0; i < arr.length - 1; i++) {
         const curr = [arr[i], i]
         const next = [arr[i + 1], i + 1]
+
+        console.log({ curr })
+        console.log({  next })
+        console('====')
         const area = getArea(curr, next)
 
         max = area > max ? area : max
@@ -102,4 +106,4 @@ function mostWaterContainer2(arr) {
 //console.log(mostWaterContainer([1, 5, 6, 3, 4]))
 // console.log(mostWaterContainer([10, 6, 5, 6, 5, 7]))
 //console.log(mostWaterContainer([3,7,5,6,8,4]))
-console.log(mostWaterContainer1([2, 4, 1, 4, 7, 8, , 6]))
+console.log(mostWaterContainer2([2, 4, 1, 4, 7, 8, 5, 6]))
