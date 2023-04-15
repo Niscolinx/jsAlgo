@@ -94,7 +94,7 @@ function mostWaterContainer1(arr) {
 function mostWaterContainer2(arr) {
     console.log(mostWaterContainer1([2, 4, 1, 4, 7, 8, 5, 6]))
 
-    //length to move = arr.length - 2 = 6
+    let max = 0
 
     let moveLength = arr.length - 2
     let left_idx = 0,
@@ -103,6 +103,8 @@ function mostWaterContainer2(arr) {
     while (moveLength >= 0){
         moveLength--
 
+        const area = getArea(arr, left_idx, right_idx)
+        max = area > max ? area : max
         
 
     }
