@@ -106,6 +106,7 @@ function mostWaterContainer2(arr) {
         const area = getArea(arr, left_idx, right_idx)
         max = area > max ? area : max
         
+        arr[left_idx] <= arr[right_idx] ? left_idx++ : right_idx++
 
     }
 
