@@ -129,9 +129,17 @@ console.log(mostWaterContainer1([2, 4, 1, 4, 7, 8, 5, 6]))
 //1. area = 2* 7 = 12, 
 // check for the min value between left pointer and right pointer
 // Then add increment or decrement the pointer
-// 2 < 6, so 
-//2. area = 4* 6 = 24, left = left++
-//3. area = 1*5 = 5, left = left++
-//4. area = 4*4 = 16, left = left++
-//5. area = 7*3 = 21, left = left++
+// 2 < 6, so left++ , now left = 1, right = arr.length - 1
+//2. area = 4* 6 = 24, 
+// 2 < 6, so left++ , now left = 1, right = arr.length - 1
+
+//3. area = 1*5 = 5, 
+// 2 < 6, so left++ , now left = 1, right = arr.length - 1
+
+//4. area = 4*4 = 16, 
+// 2 < 6, so left++ , now left = 1, right = arr.length - 1
+
+//5. area = 7*3 = 21, 
+// 2 < 6, so left++ , now left = 1, right = arr.length - 1
+
 //5. area = 7*3 = 21, moveCount = moveCount--
