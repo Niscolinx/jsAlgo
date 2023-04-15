@@ -133,15 +133,14 @@ console.log(mostWaterContainer1([2, 4, 1, 4, 7, 8, 5, 6]))
 // 2 < 6, so left++ , now left = 1, right = arr.length - 1
 //2. area = 4* 6 = 24,
 
-// 2 < 6, so left++ , now left = 1, right = arr.length - 1
-
-//3. area = 1*5 = 5,
 // 4 < 6, so left++ , now left = 2, right = arr.length - 1
+//3. area = 1*5 = 5,
 
+// 1 < 6, so left++ , now left = 3, right = arr.length - 1
 //4. area = 4*4 = 16,
-// 1 < 6, so left++ , now left = 1, right = arr.length - 1
 
+// 4 < 6, so left++ , now left = 4, right = arr.length - 1
 //5. area = 7*3 = 21,
-// 2 < 6, so left++ , now left = 1, right = arr.length - 1
 
+// 8 > 6, so left++ , now left = 1, right = arr.length - 1
 //5. area = 7*3 = 21, moveCount = moveCount--
