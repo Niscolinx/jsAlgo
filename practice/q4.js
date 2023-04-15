@@ -80,7 +80,6 @@ function mostWaterContainer1(arr) {
 
 function mostWaterContainer2(arr) {
     let max = 0
-    const listValues = []
 
     function getArea(currArr, nextArr) {
         const x = Math.abs(currArr[1] - nextArr[1])
@@ -93,29 +92,14 @@ function mostWaterContainer2(arr) {
         const curr = [arr[i], i]
         const next = [arr[i + 1], i + 1]
         const area = getArea(curr, next)
-       
-    } // time - O(N), space - 0(N)
-
-    const sorted = listValues.sort((a, b) => b[0] - a[0]) //// time - O(N)
-
-    for (let i = 0; i < sorted.length - 1; i++) {
 
         max = area > max ? area : max
-    } // time - O(N)
+    }
 
-    //total
-    // time - O(N + N + N) = 0(3N) = 0(N)
-    // space - 0(N)
     return max
 }
 
 //console.log(mostWaterContainer([1, 5, 6, 3, 4]))
 // console.log(mostWaterContainer([10, 6, 5, 6, 5, 7]))
 //console.log(mostWaterContainer([3,7,5,6,8,4]))
-console.log(mostWaterContainer1([2,4,1,4,7,8,,6]))
-
-
-
-
-
-
+console.log(mostWaterContainer1([2, 4, 1, 4, 7, 8, , 6]))
