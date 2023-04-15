@@ -92,11 +92,10 @@ function mostWaterContainer1(arr) {
 }
 
 function mostWaterContainer2(arr) {
-
-    if(arr.length <= 1){
+    if (arr.length <= 1) {
         return 0
     }
-    
+
     let max = 0
 
     let moveLength = arr.length - 2
@@ -150,6 +149,6 @@ function mostWaterContainer2(arr) {
 }
 
 //console.log(mostWaterContainer2([1, 5, 6, 3, 4]))
-// console.log(mostWaterContainer([10, 6, 5, 6, 5, 7]))
-//console.log(mostWaterContainer([3,7,5,6,8,4]))
-console.log(mostWaterContainer2([2, 4, 1, 4, 7, 8, 5, 6]))
+console.log(mostWaterContainer2([10, 6, 5, 6, 5, 7]))
+//console.log(mostWaterContainer2([3,7,5,6,8,4]))
+//console.log(mostWaterContainer2([2, 4, 1, 4, 7, 8, 5, 6]))
