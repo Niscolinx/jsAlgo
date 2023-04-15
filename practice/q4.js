@@ -94,7 +94,7 @@ function mostWaterContainer2(arr) {
 
         console.log({ curr })
         console.log({  next })
-        console('====')
+        console.log('====')
         const area = getArea(curr, next)
 
         max = area > max ? area : max
