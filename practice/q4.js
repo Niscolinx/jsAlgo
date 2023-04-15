@@ -123,5 +123,8 @@ console.log(mostWaterContainer1([2, 4, 1, 4, 7, 8, 5, 6]))
 
 //length to move = arr.length - 2
 
-//get the area, the minus one from the moveCount 
+//Check the min value between x, y  = 2
+//Get the difference between their indices = 6 - 0 = 6
+//Area will now be 2 * 6 = 12
+//get the area, then minus one from the moveCount 
 //1. area = 14, moveCount = moveCount--
