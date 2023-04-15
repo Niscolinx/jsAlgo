@@ -26,24 +26,7 @@
 //     [1,0]
 // }
 
-//{
-//     [8,4],
-//     [7,1],
-//     [6,3],
-//     [5,2],
-//     [4,5]
-//     [3,0]
-// }
-
-//{
-//     [5,4],
-//     [4,8],
-//     [3,6],
-//     [2,5],
-//     [1,7]
-//     [0,3]
-// }
-
+//area= 4* 3= 12
 
 //{
 //     [8,4],
@@ -54,7 +37,18 @@
 //     [3,0]
 // }
 
-function mostWaterContainer(arr) {
+//{
+//     [4,5]
+//     [8,4],
+//     [6,3],
+//     [5,2],
+//     [7,1],
+//     [3,0]
+// }
+
+// area = 7* 3 = 21
+
+function mostWaterContainer1(arr) {
     let max = 0
     const listValues = []
 
@@ -84,6 +78,44 @@ function mostWaterContainer(arr) {
     return max
 }
 
-console.log(mostWaterContainer([1, 5, 6, 3, 4]))
+function mostWaterContainer2(arr) {
+    let max = 0
+    const listValues = []
+
+    function getArea(currArr, compareArr) {
+        const x = Math.abs(currArr[1] - compareArr[1])
+        const y = Math.min(currArr[0], compareArr[0])
+
+        return x * y
+    }
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        const curr = [arr[i], i]
+        const next = [arr[i + 1], i + 1]
+        const area = getArea(sorted[i], sorted[i + 1])
+        listValues.push(item)
+    } // time - O(N), space - 0(N)
+
+    const sorted = listValues.sort((a, b) => b[0] - a[0]) //// time - O(N)
+
+    for (let i = 0; i < sorted.length - 1; i++) {
+
+        max = area > max ? area : max
+    } // time - O(N)
+
+    //total
+    // time - O(N + N + N) = 0(3N) = 0(N)
+    // space - 0(N)
+    return max
+}
+
+//console.log(mostWaterContainer([1, 5, 6, 3, 4]))
 // console.log(mostWaterContainer([10, 6, 5, 6, 5, 7]))
 //console.log(mostWaterContainer([3,7,5,6,8,4]))
+console.log(mostWaterContainer1([2,4,1,4,7,8,,6]))
+
+
+
+
+
+
