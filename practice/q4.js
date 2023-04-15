@@ -18,9 +18,19 @@
 //     [1,0]
 // }
 
+//{
+//     [8,4],
+//     [7,1],
+//     [6,3],
+//     [5,2],
+//     [4,5]
+//     [3,0]
+// }
+
 function mostWaterContainer(arr) {
     let max = 0
     const listValues = []
+
     function getArea(currArr, compareArr) {
         const x = Math.abs(currArr[1] - compareArr[1])
         const y = Math.min(currArr[0], compareArr[0])
@@ -31,18 +41,23 @@ function mostWaterContainer(arr) {
     for (let i = 0; i < arr.length; i++) {
         const item = [arr[i], i]
         listValues.push(item)
-    }
+    } // time - O(N), space - 0(N)
 
-    const sorted = listValues.sort((a, b) => b[0] - a[0])
+    const sorted = listValues.sort((a, b) => b[0] - a[0]) //// time - O(N)
 
     for (let i = 0; i < sorted.length - 1; i++) {
         const area = getArea(sorted[i], sorted[i + 1])
 
         max = area > max ? area : max
-    }
+    } // time - O(N)
 
+
+    //total
+    // time - O(N + N + N) = 0(3N) = 0(N)
+    // space - 0(N)
     return max
 }
 
 // console.log(mostWaterContainer([1, 5, 6, 3, 4]))
-console.log(mostWaterContainer([10, 6, 5, 6, 5, 7]))
+// console.log(mostWaterContainer([10, 6, 5, 6, 5, 7]))
+console.log(mostWaterContainer([3,7,5,6,8,4]))
