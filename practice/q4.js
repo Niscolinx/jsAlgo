@@ -92,26 +92,36 @@ function mostWaterContainer1(arr) {
 }
 
 function mostWaterContainer2(arr) {
-    let max = 0
+    console.log(mostWaterContainer1([2, 4, 1, 4, 7, 8, 5, 6]))
 
-    function getArea(currArr, nextArr) {
-        const x = Math.abs(currArr[1] - nextArr[1])
-        const y = Math.min(currArr[0], nextArr[0])
+    //length to move = arr.length - 2 = 6
 
-        return x * y
-    }
+    //Check the min value between x, y  = 2
+    //Get the difference between their indices = 7 - 0 = 7
+    //get the area, then add one from the lower value
 
-    for (let i = 0; i < arr.length - 1; i++) {
-        const curr = [arr[i], i]
-        const next = [arr[i + 1], i + 1]
+    //1. area = 2* 7 = 12,
+    // check for the min value between left pointer and right pointer
+    // Then add increment or decrement the pointer
 
-        console.log({ curr })
-        console.log({ next })
-        console.log('====')
-        const area = getArea(curr, next)
+    // 2 < 6, so left++ , now left = 1, right = 7
+    //2. area = 4* 6 = 24,
 
-        max = area > max ? area : max
-    }
+    // 4 < 6, so left++ , now left = 2, right = 7
+    //3. area = 1*5 = 5,
+
+    // 1 < 6, so left++ , now left = 3, right = 7
+    //4. area = 4*4 = 16,
+
+    // 4 < 6, so left++ , now left = 4, right = 7
+    //5. area = minvalue(7,6) = 6, i.e =  6*3 = 18,
+
+    // 7 > 6, so right-- , now left = 4, right = 6
+    //5. area = minvalue(7,5) = 5, i.e = 5*2 = 10,
+
+    // 7 > 5, so right-- , now left = 4, right = 5
+    //5. area = 7*1 = 7,
+    
 
     return max
 }
@@ -119,32 +129,4 @@ function mostWaterContainer2(arr) {
 //console.log(mostWaterContainer2([1, 5, 6, 3, 4]))
 // console.log(mostWaterContainer([10, 6, 5, 6, 5, 7]))
 //console.log(mostWaterContainer([3,7,5,6,8,4]))
-console.log(mostWaterContainer1([2, 4, 1, 4, 7, 8, 5, 6]))
 
-//length to move = arr.length - 2 = 6
-
-//Check the min value between x, y  = 2
-//Get the difference between their indices = 7 - 0 = 7
-//get the area, then add one from the lower value
-
-//1. area = 2* 7 = 12,
-// check for the min value between left pointer and right pointer
-// Then add increment or decrement the pointer
-
-// 2 < 6, so left++ , now left = 1, right = 7
-//2. area = 4* 6 = 24,
-
-// 4 < 6, so left++ , now left = 2, right = 7
-//3. area = 1*5 = 5,
-
-// 1 < 6, so left++ , now left = 3, right = 7
-//4. area = 4*4 = 16,
-
-// 4 < 6, so left++ , now left = 4, right = 7
-//5. area = minvalue(7,6) = 6, i.e =  6*3 = 18,
-
-// 7 > 6, so right-- , now left = 4, right = 6
-//5. area = minvalue(7,5) = 5, i.e = 5*2 = 10, 
-
-// 7 > 5, so right-- , now left = 4, right = 5
-//5. area = 7*1 = 7, 
