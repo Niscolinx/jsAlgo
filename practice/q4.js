@@ -19,6 +19,14 @@
 // }
 
 //{
+//     [4,4],
+//     [3,3],
+//     [6,2],
+//     [5,1],
+//     [1,0]
+// }
+
+//{
 //     [8,4],
 //     [7,1],
 //     [6,3],
@@ -34,6 +42,16 @@
 //     [2,5],
 //     [1,7]
 //     [0,3]
+// }
+
+
+//{
+//     [8,4],
+//     [7,1],
+//     [6,3],
+//     [5,2],
+//     [4,5]
+//     [3,0]
 // }
 
 function mostWaterContainer(arr) {
@@ -60,13 +78,12 @@ function mostWaterContainer(arr) {
         max = area > max ? area : max
     } // time - O(N)
 
-
     //total
     // time - O(N + N + N) = 0(3N) = 0(N)
     // space - 0(N)
     return max
 }
 
-// console.log(mostWaterContainer([1, 5, 6, 3, 4]))
+console.log(mostWaterContainer([1, 5, 6, 3, 4]))
 // console.log(mostWaterContainer([10, 6, 5, 6, 5, 7]))
-console.log(mostWaterContainer([3,7,5,6,8,4]))
+//console.log(mostWaterContainer([3,7,5,6,8,4]))
