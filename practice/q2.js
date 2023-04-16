@@ -12,17 +12,19 @@ const isMonotonic = (arr) => {
             if (arr[i + 1] < arr[i]) {
                 return false
             }
-        }
+        } // time = O(N)
         return true
     } else {
         for (let i = 0; i < arr.length; i++) {
             if (arr[i + 1] > arr[i]) {
                 return false
             }
-        }
+        } // time = O(N)
 
         return true
     }
+
+    //space = O(1)
 }
 
 const givenArr = [2,2,2,2,2]

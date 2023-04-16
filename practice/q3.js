@@ -9,6 +9,7 @@
 
 const givenArr = [1, 2, 3, 4, 5]
 
+//My Solution
 const rotateArr = (arr, k) => {
     if (arr.length < 1) return []
     if (k === 0) return arr
@@ -29,7 +30,7 @@ const rotateArr = (arr, k) => {
     //rotatedArr = k_sliced.concat(remaining_sliced)
 
 
-    const k_sliced = arr.splice(arr.length - k, k)
+    const k_sliced = arr.splice(arr.length - k, k) //space - 0(N) //time- O(1)
 
     arr = k_sliced.concat(arr)
 

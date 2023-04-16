@@ -37,7 +37,7 @@ const squareArrAndSort = (arr) => {
     const sortArr = (arr) => {
         arr.sort()
 
-    }
+    }  //space = O(N)
 
     sortArr(updatedArr)
     
@@ -60,7 +60,7 @@ const squareArrAndSort = (arr) => {
             updatedArr[i] = Math.pow(arr[leftIdx], 2)
             leftIdx = leftIdx + 1
         }
-    }
+    }  // time - O(N)
 
     return updatedArr
 }

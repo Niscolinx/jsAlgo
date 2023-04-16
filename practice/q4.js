@@ -91,6 +91,8 @@ function mostWaterContainer1(arr) {
     return max
 }
 
+
+//Final Answer
 function mostWaterContainer2(arr) {
     if (arr.length <= 1) {
         return 0
@@ -109,12 +111,12 @@ function mostWaterContainer2(arr) {
         const area = getArea(arr, left_idx, right_idx)
         max = area > max ? area : max
 
-        arr[left_idx] <= arr[right_idx] ? left_idx++ : right_idx++
-    }
+        arr[left_idx] <= arr[right_idx] ? left_idx++ : right_idx--
+    } //Time - O(N), space O(1)
 
     function getArea(arr, left_idx, right_idx) {
         const minValue = Math.min(arr[left_idx], arr[right_idx])
-        const diff = right_idx - left_idx
+        const diff = Math.abs(right_idx - left_idx)
 
         return minValue * diff
     }
