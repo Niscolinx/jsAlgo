@@ -22,5 +22,8 @@
 const isomorphic = (string1, string2) => {
 
 
-    
+    for(let i = 0; i < string1.length; i++){
+            
+    }
+
 }
