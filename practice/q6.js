@@ -29,8 +29,6 @@ const isomorphic = (str1, str2) => {
         }
     }
 
-    console.log(frq_1, frq_2)
-
     if (frq_1.size !== frq_2.size) {
     
         return false
@@ -39,13 +37,25 @@ const isomorphic = (str1, str2) => {
     const arr1 = Array.from(frq_1.values())
     const arr2 = Array.from(frq_2.values())
 
-    console.log({arr1}, typeof)
+
+    for( let j = 0; j < arr1.length; j++){
+
+        if(arr1[i] !== arr2[i]){
+            return false
+        }
+    }
 
     return true
+
+
+
+   console.log(check, 'jjjjj')
+
+    return check
 
 }
 
 const s = 'abacus'
-const t = 'pbpgio'
+const t = 'abajff'
 
 console.log(isomorphic(s, t))
