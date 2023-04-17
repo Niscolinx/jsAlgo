@@ -4,6 +4,9 @@
 // const arr1 = [3,5,3,6]
 // const targetValue = 8
 
+//If array has only 1 item return 0
+//If two integers cannot form the targetValue return 0
+
 
 //Divide targetValue by 2
 // In the case of 8, it's 4 and 4
