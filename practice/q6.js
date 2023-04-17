@@ -26,8 +26,10 @@ const isomorphic = (string1, string2) => {
 
     for(let i = 0; i < string1.length; i++){
 
-        string1_frequency_count[string1] = [...string1_frequency_count[string1], i]
-        string1_frequency_count[string2] = [...string1_frequency_count[string2], i]
+        string1_frequency_count[string1] ??= [...string1_frequency_count[string1], i]
+        string1_frequency_count[string2] ??= [...string1_frequency_count[string2], i]
     }
+
+
 
 }
