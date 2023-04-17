@@ -15,7 +15,18 @@
 const sum_to_target = (arr, target_value) => {
 
 
-    for(let i = 0; i < arr.length; i++){
-        
+    for(let i = 0; i < arr.length - 1; i++){
+
+        for(let j = i + 1; j < arr.length; j++){
+
+            if(arr[i] + arr[j] === target_value){
+                return [i, j]
+            }
+        }
+
     }
+
+    return 0
 }
+
+console.log(sum_to_target([4, 5, 3, 6, 7, 3], 8))
