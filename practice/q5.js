@@ -1,6 +1,5 @@
 // You are given an array of integers and another target targetValue. Write a function that will take these inputs and return the indices of the 2 integers in the array that add up to targetValue
 
-
 // const arr1 = [3,5,3,6] = [8, 6, 8, 5]
 // const targetValue = 11
 // const arr1 = [4,5,3,6,7,3] = [4,3,5,2,1,5]
@@ -14,32 +13,23 @@
 
 //My Solution
 const sum_to_target1 = (arr, target_value) => {
-
-
-    for(let i = 0; i < arr.length - 1; i++){
-
-        for(let j = i + 1; j < arr.length; j++){
-
-            if(arr[i] + arr[j] === target_value){
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] === target_value) {
                 return [i, j]
             }
         }
 
+        return []
     }
+    const sum_to_target2 = (arr, target_value) => {
+        const hash_table = new Map()
 
-    return []
-}
-const sum_to_target2 = (arr, target_value) => {
-
-    const hash_table = {}
-
-    for(let i = 0; i < arr.length; i++){
-
-        
-
+        for (let i = 0; i < arr.length; i++) {
+            if (hash_table.has(arr[i])) {
+            }
+        }
     }
-
-    return []
 }
 
-console.log(sum_to_target([3, 5, 3, 6], 11))
+console.log(sum_to_target2([3, 5, 3, 6], 11))
