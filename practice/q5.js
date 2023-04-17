@@ -31,15 +31,11 @@ const sum_to_target1 = (arr, target_value) => {
 }
 const sum_to_target2 = (arr, target_value) => {
 
+    const hash_table = {}
 
-    for(let i = 0; i < arr.length - 1; i++){
+    for(let i = 0; i < arr.length; i++){
 
-        for(let j = i + 1; j < arr.length; j++){
-
-            if(arr[i] + arr[j] === target_value){
-                return [i, j]
-            }
-        }
+        
 
     }
 
