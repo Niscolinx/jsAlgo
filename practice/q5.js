@@ -27,6 +27,8 @@ const sum_to_target1 = (arr, target_value) => {
 
         for (let i = 0; i < arr.length; i++) {
             if (hash_table.has(arr[i])) {
+
+                const value = hash_table.get(arr[i])
             }
         }
     }
