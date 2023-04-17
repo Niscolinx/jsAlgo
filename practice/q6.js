@@ -15,7 +15,8 @@
 //     i:[3, 4]
 // }
 
-const isomorphic = (str1, str2) => {
+//My Solution
+const isomorphic1 = (str1, str2) => {
     const frq_1 = new Map()
     const frq_2 = new Map()
 
@@ -27,14 +28,14 @@ const isomorphic = (str1, str2) => {
             frq_1.set(str1[i], [i])
             frq_2.set(str2[i], [i])
         }
-    }
+    } //time - O(N), space - O(N)
 
     if (frq_1.size !== frq_2.size) {
         return false
     }
 
-    const arr1 = Array.from(frq_1.values()).flat()
-    const arr2 = Array.from(frq_2.values()).flat()
+    const arr1 = Array.from(frq_1.values()).flat() //time - O(N), space - O(N)
+    const arr2 = Array.from(frq_2.values()).flat() //time - O(N), space - O(N)
 
     console.log({arr1})
 
@@ -44,12 +45,20 @@ const isomorphic = (str1, str2) => {
         if (arr1[j] !== arr2[j]) {
             return false
         }
-    }
+    }///time - O(N)
+
+
+    //time - O(N), space - O(N)
 
     return true
 }
 
+
+
+
+
+
 const s = 'abacus'
 const t = 'abajjf'
 
-console.log(isomorphic(s, t))
+console.log(isomorphic1(s, t))
