@@ -21,11 +21,13 @@
 
 const isomorphic = (string1, string2) => {
     
-    const string1_frequency_count = new Map()
-    const string2_frequency_count = new Map()
+    const string1_frequency_count = {}
+    const string2_frequency_count = {}
 
     for(let i = 0; i < string1.length; i++){
 
+        string1_frequency_count[string1] = [...string1_frequency_count[string1], i]
+        string1_frequency_count[string2] = [...string1_frequency_count[string2], i]
     }
 
 }
