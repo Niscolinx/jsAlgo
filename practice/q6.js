@@ -31,7 +31,8 @@ const isomorphic = (str1, str2) => {
 
     console.log(frq_1, frq_2)
 
-    if (frq_1.size() !== frq_2.size()) {
+    if (frq_1.size !== frq_2.size) {
+    
         return false
     }
 
