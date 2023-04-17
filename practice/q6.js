@@ -33,8 +33,8 @@ const isomorphic = (str1, str2) => {
         return false
     }
 
-    const arr1 = Array.from(frq_1.values())
-    const arr2 = Array.from(frq_2.values())
+    const arr1 = Array.from(frq_1.values()).flat()
+    const arr2 = Array.from(frq_2.values()).flat()
 
     console.log({arr1})
 
@@ -50,6 +50,6 @@ const isomorphic = (str1, str2) => {
 }
 
 const s = 'abacus'
-const t = 'abajof'
+const t = 'abajjf'
 
 console.log(isomorphic(s, t))
