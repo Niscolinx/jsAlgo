@@ -54,7 +54,16 @@ const isomorphic1 = (str1, str2) => {
 }
 
 
+function isomorphic2(str1, str2){
 
+    const freq_map = new Map()
+
+
+    for(let i = 0; i< str1.length; i++){
+        
+    }
+
+}
 
 
 
