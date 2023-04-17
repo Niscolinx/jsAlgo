@@ -26,9 +26,15 @@ const sum_to_target1 = (arr, target_value) => {
         const hash_table = new Map()
 
         for (let i = 0; i < arr.length; i++) {
-            if (hash_table.has(arr[i])) {
+            const to_find = target_value - arr[i]
+            if (hash_table.has(to_find)) {
 
-                const value = hash_table.get(arr[i])
+                return [hash_table.get(to_find), i]
+
+            }
+
+            else{
+                
             }
         }
     }
