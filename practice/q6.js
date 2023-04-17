@@ -4,3 +4,11 @@
 
 // const s = 'abacus'
 // const t = 'pbpgsi'
+
+{
+    a:[0, 2],
+    b:[]
+    c:1,
+    u:1,
+    s:1
+}
