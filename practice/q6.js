@@ -75,7 +75,7 @@ function isomorphic2(str1, str2) {
     return true
 }
 
-const s = 'abacusb'
-const t = 'abajjfo'
+const s = 'abacusp'
+const t = 'abajjfl'
 
 console.log(isomorphic2(s, t))
