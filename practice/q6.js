@@ -39,7 +39,7 @@ const isomorphic = (str1, str2) => {
     for (let j = 0; j < arr1.length; j++) {
         console.log(arr1[j], arr2[j])
 
-        if (arr1[j] !== arr2[j]) {
+        if ([...arr1[j]] !== [...arr2[j]]) {
             return false
         }
     }
