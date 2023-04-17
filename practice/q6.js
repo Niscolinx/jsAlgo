@@ -18,3 +18,9 @@
     g:[2],
     i:[3, 4]
 }
+
+const isomorphic = (string1, string2) => {
+
+
+    
+}
