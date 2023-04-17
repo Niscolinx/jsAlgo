@@ -20,9 +20,11 @@ const sum_to_target1 = (arr, target_value) => {
             }
         }
     }
+    //time = O(n2), space = O(1)
     return []
 }
 
+//Optimum Solution
 const sum_to_target2 = (arr, target_value) => {
     const hash_table = new Map()
 
@@ -36,6 +38,7 @@ const sum_to_target2 = (arr, target_value) => {
         }
     }
 
+    //time = O(n), space = O(n)
     return []
 }
 
