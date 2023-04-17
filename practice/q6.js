@@ -29,7 +29,18 @@ const isomorphic = (str1, str2) => {
         }
     }
 
-    console.log({ frq_1, frq_2 })
+    console.log(frq_1, frq_2)
+
+    if (frq_1.size() !== frq_2.size()) {
+        return false
+    }
+
+    if(frq_1.values() !== frq_2.values()){
+        return false
+    }
+
+    return true
+
 }
 
 const s = 'abacus'
