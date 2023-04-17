@@ -19,9 +19,8 @@ const sum_to_target1 = (arr, target_value) => {
                 return [i, j]
             }
         }
-
-        return []
     }
+    return []
 }
 
 const sum_to_target2 = (arr, target_value) => {
@@ -40,4 +39,4 @@ const sum_to_target2 = (arr, target_value) => {
     return []
 }
 
-console.log(sum_to_target2([4, 5, 3, 6, 7, 3], 8))
+console.log(sum_to_target1([4, 5, 3, 6, 7, 3], 8))
