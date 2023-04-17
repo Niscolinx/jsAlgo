@@ -36,9 +36,10 @@ const isomorphic = (str1, str2) => {
         return false
     }
 
-    if(frq_1.values() !== frq_2.values()){
-        return false
-    }
+    const arr1 = Array.from(frq_1.values())
+    const arr2 = Array.from(frq_2.values())
+
+    console.log({arr1}, typeof)
 
     return true
 
