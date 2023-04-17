@@ -52,7 +52,6 @@ const isomorphic1 = (str1, str2) => {
     return true
 }
 
-
 //Optimum Solution
 function isomorphic2(str1, str2) {
     const freq_map1 = new Map()
@@ -60,13 +59,12 @@ function isomorphic2(str1, str2) {
 
     for (let i = 0; i < str1.length; i++) {
         if (freq_map1.has(str1[i])) {
-            
             if (freq_map1.get(str1[i]) !== str2[i]) {
                 return false
             }
-        } 
-        if (freq_map2.has(str1[i])) {
-            if (freq_map1.get(str1[i]) !== str2[i]) {
+        }
+        if (freq_map2.has(str2[i])) {
+            if (freq_map2.get(str2[i]) !== str1[i]) {
                 return false
             }
         } else {
@@ -75,12 +73,10 @@ function isomorphic2(str1, str2) {
         }
     }
 
-    console.log({freq_map1})
-
     return true
 }
 
 const s = 'abacusp'
-const t = 'abajjfl'
+const t = 'abajpfl'
 
 console.log(isomorphic2(s, t))
