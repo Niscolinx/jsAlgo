@@ -64,8 +64,14 @@ function isomorphic2(str1, str2) {
             if (freq_map1.get(str1[i]) !== str2[i]) {
                 return false
             }
+        } 
+        if (freq_map2.has(str1[i])) {
+            if (freq_map1.get(str1[i]) !== str2[i]) {
+                return false
+            }
         } else {
             freq_map1.set(str1[i], str2[i])
+            freq_map2.set(str2[i], str1[i])
         }
     }
 
