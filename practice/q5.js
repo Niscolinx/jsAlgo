@@ -22,22 +22,22 @@ const sum_to_target1 = (arr, target_value) => {
 
         return []
     }
-    const sum_to_target2 = (arr, target_value) => {
-        const hash_table = new Map()
+}
 
-        for (let i = 0; i < arr.length; i++) {
-            const to_find = target_value - arr[i]
-            if (hash_table.has(to_find)) {
+const sum_to_target2 = (arr, target_value) => {
+    const hash_table = new Map()
 
-                return [hash_table.get(to_find), i]
+    for (let i = 0; i < arr.length; i++) {
+        const to_find = target_value - arr[i]
 
-            }
-
-            else{
-                
-            }
+        if (hash_table.has(to_find)) {
+            return [hash_table.get(to_find), i]
+        } else {
+            hash_table.set(arr[i], i)
         }
     }
+
+    return []
 }
 
 console.log(sum_to_target2([3, 5, 3, 6], 11))
