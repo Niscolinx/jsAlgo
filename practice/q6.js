@@ -66,7 +66,7 @@ function isomorphic2(str1, str2) {
                 return false
             }
         } else {
-            freq_map.set(str1, str2)
+            freq_map.set(str1[i], str2[i])
         }
     }
 
