@@ -11,3 +11,11 @@
 
 //Divide targetValue by 2
 // In the case of 8, it's 4 and 4
+
+const sum_to_target = (arr, target_value) => {
+
+
+    for(let i = 0; i < arr.length; i++){
+        
+    }
+}
