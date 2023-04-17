@@ -60,7 +60,16 @@ function isomorphic2(str1, str2){
 
 
     for(let i = 0; i< str1.length; i++){
-        
+
+        if(freq_map.has(str1[i])){
+
+        }
+
+        else{
+
+            freq_map.set(str1, str2)
+        }
+
     }
 
 }
