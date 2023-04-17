@@ -52,6 +52,8 @@ const isomorphic1 = (str1, str2) => {
     return true
 }
 
+
+//Optimum Solution
 function isomorphic2(str1, str2) {
     const freq_map = new Map()
 
@@ -71,4 +73,4 @@ function isomorphic2(str1, str2) {
 const s = 'abacusb'
 const t = 'abajjfo'
 
-console.log(isomorphic1(s, t))
+console.log(isomorphic2(s, t))
