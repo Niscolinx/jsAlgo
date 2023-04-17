@@ -42,4 +42,4 @@ const sum_to_target2 = (arr, target_value) => {
     return []
 }
 
-console.log(sum_to_target([], 11))
+console.log(sum_to_target([3, 5, 3, 6], 11))
