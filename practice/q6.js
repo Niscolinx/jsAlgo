@@ -37,7 +37,7 @@ const isomorphic1 = (str1, str2) => {
     const arr1 = Array.from(frq_1.values()).flat() //time - O(N), space - O(N)
     const arr2 = Array.from(frq_2.values()).flat() //time - O(N), space - O(N)
 
-    console.log({arr1})
+    console.log({ arr1 })
 
     for (let j = 0; j < arr1.length; j++) {
         console.log(arr1[j], arr2[j])
@@ -45,36 +45,28 @@ const isomorphic1 = (str1, str2) => {
         if (arr1[j] !== arr2[j]) {
             return false
         }
-    }///time - O(N)
-
+    } ///time - O(N)
 
     //time - O(N), space - O(N)
 
     return true
 }
 
-
-function isomorphic2(str1, str2){
-
+function isomorphic2(str1, str2) {
     const freq_map = new Map()
 
-
-    for(let i = 0; i< str1.length; i++){
-
-        if(freq_map.has(str1[i])){
-            if(freq_map.get(str1[i])){}
-        }
-
-        else{
-
+    for (let i = 0; i < str1.length; i++) {
+        if (freq_map.has(str1[i])) {
+            if (freq_map.get(str1[i]) !== str2[i]) {
+                return false
+            }
+        } else {
             freq_map.set(str1, str2)
         }
-
     }
 
+    return true
 }
-
-
 
 const s = 'abacusb'
 const t = 'abajjfo'
