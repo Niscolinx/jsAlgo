@@ -62,7 +62,7 @@ function isomorphic2(str1, str2){
     for(let i = 0; i< str1.length; i++){
 
         if(freq_map.has(str1[i])){
-
+            if(freq_map.get(str1[i])){}
         }
 
         else{
