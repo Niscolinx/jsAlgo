@@ -60,8 +60,6 @@ function isomorphic2(str1, str2) {
     for (let i = 0; i < str1.length; i++) {
         if (freq_map.has(str1[i])) {
             
-            console.log(str1[i])
-            console.log(freq_map.get(str1[i]), str2[i])
             if (freq_map.get(str1[i]) !== str2[i]) {
                 return false
             }
