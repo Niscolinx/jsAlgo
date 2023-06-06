@@ -72,6 +72,7 @@ function isomorphic2(str1, str2) {
             freq_map2.set(str2[i], str1[i])
         }
     }
+    //Time - O(N), space - O(1)
 
     return true
 }
