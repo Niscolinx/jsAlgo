@@ -7,7 +7,7 @@ function fibonacci(n){
 
     const result = n + fibonacci(n-1)
 
-    console.log({result}, '!')
+    console.log({result})
 
     return result
 
