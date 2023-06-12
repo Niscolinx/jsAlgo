@@ -5,13 +5,12 @@ function fibonacci(n){
  
     if(n <= 1) return n
 
-    const result = n + fibonacci(n-1)
+    const result = fibonacci(n-2) + fibonacci(n-1)
 
-    console.log({result})
 
     return result
 
 }
 
 
-console.log(fibonacci(2))
+console.log(fibonacci(8))
