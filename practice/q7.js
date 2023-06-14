@@ -5,6 +5,8 @@ function fibonacci(n){
  
     if(n <= 1) return n
 
+    console.log({n})
+
     const result = fibonacci(n-2) + fibonacci(n-1)
 
 
