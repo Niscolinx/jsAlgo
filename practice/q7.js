@@ -4,14 +4,13 @@
 const hash = {}
 
 function fibonacci(n){
- 
     if(n <= 1) return n
     
-    if(hash[n]) return hash[n]
+   // if(hash[n]) return hash[n]
 
     const result = fibonacci(n - 2) + fibonacci(n - 1)
     
-    hash[n] = result
+   // hash[n] = result
 
 
     return result
@@ -19,4 +18,4 @@ function fibonacci(n){
 }
 
 
-console.log(fibonacci(8))
+console.log(fibonacci(999999999999))
