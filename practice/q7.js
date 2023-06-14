@@ -7,7 +7,6 @@ function fibonacci(n){
  
     if(n <= 1) return n
 
-    console.log({ hash })
     
     if(hash[n]) return hash[n]
 
@@ -21,4 +20,4 @@ function fibonacci(n){
 }
 
 
-console.log(fibonacci(4))
+console.log(fibonacci(8))
