@@ -6,7 +6,6 @@ const hash = {}
 function fibonacci(n){
  
     if(n <= 1) return n
-
     
     if(hash[n]) return hash[n]
 
