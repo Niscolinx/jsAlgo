@@ -7,13 +7,13 @@ function fibonacci(n){
  
     if(n <= 1) return n
 
-    console.log({hash})
+    console.log({ hash })
+    
+    if(hash[n]) return hash[n]
 
     const result = fibonacci(n - 2) + fibonacci(n - 1)
     
     hash[n] = result
-
-
 
 
     return result
