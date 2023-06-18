@@ -5,7 +5,7 @@ const hash = {}
 function fibonacci(n) {
     if (n <= 1) return n
 
-    const getTimeNow = Date.now()
+    //const getTimeNow = Date.now()
 
     if (hash[n]) return hash[n]
 
@@ -13,11 +13,11 @@ function fibonacci(n) {
 
     hash[n] = result
 
-    const getTimeAfter = Date.now()
+    //const getTimeAfter = Date.now()
 
-    console.log(`Time taken for ${n} is ${getTimeAfter - getTimeNow}ms`)
+    //console.log(`Time taken for ${n} is ${getTimeAfter - getTimeNow}ms`)
 
     return result
 }
 
-console.log(fibonacci(1000))
+console.log(fibonacci(14))

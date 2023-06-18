@@ -11,7 +11,7 @@
             // "outFiles": [
             // "${workspaceFolder}/src/**/*.js"
             //  ],
-                    "program": "${workspaceFolder}/practice/q7.js",
+                    "program": "${workspaceFolder}/practice/q8.js",
 
              "sourceMaps": true,
             "cwd": "${workspaceFolder}",
