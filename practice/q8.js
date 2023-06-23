@@ -18,4 +18,4 @@ function peculiarArray(arr) {
     return sum(arr, depth)
 }
 
-console.log(peculiarArray([1, 3, [5,8]]))
+console.log(peculiarArray([1, 3, [5, 8, 2]]))
